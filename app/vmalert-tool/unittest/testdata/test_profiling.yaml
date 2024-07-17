@@ -9,11 +9,11 @@ tests:
     name: "stress test"
     input_series:
       - series: "test"
-        values: "1+1x1000000"
+        values: "1+5x1000000"
 
     metricsql_expr_test:
-      - expr: job:test:count_over_time1m
-        eval_time: 10m
+      - expr: job:test:count_over_time10s
+        eval_time: 10000s
         exp_samples:
-          - labels: '{__name__="job:test:count_over_time1m"}'
-            value: 600
+          - labels: '{__name__="job:test:quantile_over_time10s"}'
+            value: 6000

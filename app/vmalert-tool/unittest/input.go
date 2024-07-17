@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"math/rand/v2"
 	"net/http"
 	"regexp"
 	"strconv"
@@ -38,6 +39,50 @@ func httpWrite(address string, r io.Reader) {
 		logger.Fatalf("failed to send to storage: %v", err)
 	}
 	resp.Body.Close()
+}
+
+// writeInputSeries send input series to vmstorage and flush them
+func writeInputSeriesRandom(input []series, interval *promutils.Duration, startStamp time.Time, dst string) error {
+	r := testutil.WriteRequest{}
+	for _, data := range input {
+		expr, err := metricsql.Parse(data.Series)
+		if err != nil {
+			return fmt.Errorf("failed to parse series %s: %v", data.Series, err)
+		}
+		promvals, err := parseInputValue(data.Values, true)
+		if err != nil {
+			return fmt.Errorf("failed to parse input series value %s: %v", data.Values, err)
+		}
+		metricExpr, ok := expr.(*metricsql.MetricExpr)
+		if !ok {
+			return fmt.Errorf("failed to parse series %s to metric expr: %v", data.Series, err)
+		}
+		samples := make([]testutil.Sample, 0, len(promvals))
+		ts := startStamp
+		for _, v := range promvals {
+			if !v.Omitted {
+				samples = append(samples, testutil.Sample{
+					Timestamp: ts.UnixMilli(),
+					Value:     rand.NormFloat64() * 100000,
+				})
+			}
+			ts = ts.Add(interval.Duration())
+		}
+		var ls []testutil.Label
+		for _, filter := range metricExpr.LabelFilterss[0] {
+			ls = append(ls, testutil.Label{Name: filter.Label, Value: filter.Value})
+		}
+		r.Timeseries = append(r.Timeseries, testutil.TimeSeries{Labels: ls, Samples: samples})
+	}
+
+	data, err := testutil.Compress(r)
+	if err != nil {
+		return fmt.Errorf("failed to compress data: %v", err)
+	}
+	// write input series to vm
+	httpWrite(dst, bytes.NewBuffer(data))
+	vmstorage.Storage.DebugFlush()
+	return nil
 }
 
 // writeInputSeries send input series to vmstorage and flush them
