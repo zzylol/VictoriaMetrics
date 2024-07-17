@@ -3,4 +3,3 @@ groups:
     rules:
       - record: job:test:count_over_time1m
         expr: count_over_time(test[1m])
- 

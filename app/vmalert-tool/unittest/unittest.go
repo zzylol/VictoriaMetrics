@@ -249,6 +249,7 @@ func (tg *testGroup) test(evalInterval time.Duration, groupOrderMap map[string]i
 	if err != nil {
 		return []error{err}
 	}
+	fmt.Println("finished writeInputSeries")
 
 	q, err := datasource.Init(nil)
 	if err != nil {
@@ -294,6 +295,7 @@ func (tg *testGroup) test(evalInterval time.Duration, groupOrderMap map[string]i
 
 	evalIndex := 0
 	maxEvalTime := testStartTime.Add(tg.maxEvalTime())
+	fmt.Println("testStart time:", testStartTime, "maxEval Time:", maxEvalTime)
 	for ts := testStartTime; ts.Before(maxEvalTime) || ts.Equal(maxEvalTime); ts = ts.Add(evalInterval) {
 		for _, g := range groups {
 			if len(g.Rules) == 0 {
@@ -387,7 +389,6 @@ func (tg *testGroup) test(evalInterval time.Duration, groupOrderMap map[string]i
 			}
 			evalIndex++
 		}
-
 	}
 
 	checkErrs = append(checkErrs, checkMetricsqlCase(tg.MetricsqlExprTests, q)...)

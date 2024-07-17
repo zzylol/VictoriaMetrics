@@ -2,21 +2,18 @@ rule_files:
   - rules_profiling.yaml
 
 evaluation_interval: 1s
-group_eval_order: ["group4", "group2", "group3"]
+group_eval_order: ["group1"]
 
 tests:
   - interval: 100ms
     name: "stress test"
     input_series:
       - series: "test"
-        values: "1+1x2"
+        values: "1+1x1000000"
 
     metricsql_expr_test:
       - expr: job:test:count_over_time1m
-        eval_time: 1s
+        eval_time: 10m
         exp_samples:
-          - labels: '{__name__="job:test:count_over_time1m", datacenter="dc-123"}'
-            value: 3
-
-    external_labels:
-      datacenter: dc-123
+          - labels: '{__name__="job:test:count_over_time1m"}'
+            value: 600
