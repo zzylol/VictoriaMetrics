@@ -13,7 +13,7 @@ tests:
 
     metricsql_expr_test:
       - expr: job:test:count_over_time1000s
-        eval_time: 500000s
+        eval_time: 100010s
         exp_samples:
           - labels: '{__name__="job:test:quantile_over_time1000s"}'
             value: 6000
