@@ -2,4 +2,4 @@ groups:
   - name: group1
     rules:
       - record: job:test:quantile_over_time1000s
-        expr: quantile_over_time(0.99, test[100000s])
+        expr: quantile_over_time(0.99, test[10000s])
