@@ -1,0 +1,9 @@
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPutSketch ./ -numts=1000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPutSketch ./ -numts=10000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPutSketch ./ -numts=25000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPutSketch ./ -numts=50000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPutSketch ./ -numts=75000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPutSketch ./ -numts=100000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPutSketch ./ -numts=150000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPutSketch ./ -numts=200000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPutSketch ./ -numts=500000
