@@ -1,9 +1,33 @@
 === RUN   TestWriteZipfThroughPutSampling
-2024-07-22T16:42:16.991Z	info	lib/memory/memory.go:42	limiting caches to 242618914406 bytes, leaving 161745942938 bytes to the OS according to -memory.allowedPercent=60
-2024-07-22T16:42:18.109Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
-2024-07-22T16:42:18.139Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+2024-07-22T17:45:04.445Z	info	lib/memory/memory.go:42	limiting caches to 242618914406 bytes, leaving 161745942938 bytes to the OS according to -memory.allowedPercent=60
+2024-07-22T17:45:05.448Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T17:45:05.560Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
 ingestion completed
-    storage_writethroughput_test.go:320: 10000 63.162659894 6.839483972413215e+06
---- PASS: TestWriteZipfThroughPutSampling (81.80s)
+    storage_writethroughput_test.go:320: 1000 17.712558151 2.438947532689458e+06
+--- PASS: TestWriteZipfThroughPutSampling (23.56s)
+=== RUN   TestWriteZipfThroughPutSampling
+2024-07-22T17:45:28.636Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T17:45:28.672Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:320: 1000 17.23911316 2.505929371137094e+06
+--- PASS: TestWriteZipfThroughPutSampling (23.20s)
+=== RUN   TestWriteZipfThroughPutSampling
+2024-07-22T17:45:51.923Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T17:45:51.957Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:320: 1000 17.474343492 2.472195880765281e+06
+--- PASS: TestWriteZipfThroughPutSampling (23.59s)
+=== RUN   TestWriteZipfThroughPutSampling
+2024-07-22T17:46:15.430Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T17:46:15.461Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:320: 1000 16.942629394 2.5497813235116084e+06
+--- PASS: TestWriteZipfThroughPutSampling (22.81s)
+=== RUN   TestWriteZipfThroughPutSampling
+2024-07-22T17:46:38.282Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T17:46:38.314Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:320: 1000 17.515262742 2.466420323596422e+06
+--- PASS: TestWriteZipfThroughPutSampling (23.26s)
 PASS
-ok  	github.com/VictoriaMetrics/VictoriaMetrics/lib/storage	82.180s
+ok  	github.com/VictoriaMetrics/VictoriaMetrics/lib/storage	116.761s

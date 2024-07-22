@@ -9,6 +9,11 @@ import (
 	"github.com/zzylol/prometheus-sketch-VLDB/uniform-sampling-caching/prometheus/model/labels"
 )
 
+const (
+	// DefaultStripeSize is the default number of entries to allocate in the stripeSeries hash map.
+	DefaultStripeSize = (1 << 14)
+)
+
 type SamplingCacheEntry struct {
 	id   int
 	lset labels.Labels
@@ -26,7 +31,7 @@ type stripeLock struct {
 	_ [40]byte
 }
 
-type SamplingCacheSeries struct {
+type SamplingCacheSeries struct { // stripeSeries
 	size   int
 	id     int
 	hashes []SamplingCacheHashMap
@@ -168,7 +173,7 @@ func (sc *SamplingCache) NewSamplingCacheEntry(lset labels.Labels, sampling_rate
 }
 
 func NewSamplingCacheSeries(stripeSize int) *SamplingCacheSeries {
-	ss := &SamplingCacheSeries{ // TODO: use stripeSeries toreduce lock contention later
+	ss := &SamplingCacheSeries{ // TODO: use stripeSeries to reduce lock contention later
 		size:   stripeSize,
 		id:     0,
 		hashes: make([]SamplingCacheHashMap, stripeSize),
@@ -189,7 +194,7 @@ func NewSamplingCacheSeries(stripeSize int) *SamplingCacheSeries {
 }
 
 func NewSamplingCache() *SamplingCache {
-	ss := NewSamplingCacheSeries(10)
+	ss := NewSamplingCacheSeries(DefaultStripeSize)
 	sc := &SamplingCache{
 		series: ss,
 	}

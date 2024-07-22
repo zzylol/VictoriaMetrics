@@ -315,7 +315,7 @@ func NewSketchSeries(stripeSize int) *sketchSeries {
 }
 
 func NewPromSketches() *PromSketches {
-	ss := NewSketchSeries(5)
+	ss := NewSketchSeries(DefaultStripeSize)
 	ps := &PromSketches{
 		series: ss,
 	}
@@ -325,7 +325,7 @@ func NewPromSketches() *PromSketches {
 }
 
 func NewPromSketchesWithConfig(sketchRuleTests []SketchRuleTest, sc *SketchConfig) *PromSketches {
-	ss := NewSketchSeries(5)
+	ss := NewSketchSeries(DefaultStripeSize)
 	ps := &PromSketches{
 		series: ss,
 	}
