@@ -11,6 +11,7 @@ import (
 	"testing"
 	"time"
 
+	promlabels "github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches/model/labels"
 	"github.com/zzylol/promsketch"
 )
 
@@ -102,6 +103,7 @@ func TestWriteZipfThroughPut(t *testing.T) {
 	}()
 
 	promcache := promsketch.NewPromSketches()
+	plabels := make([]promlabels.Labels, 0)
 
 	var mn MetricName
 	metricRows := make([]MetricRow, num_ts)
@@ -110,17 +112,21 @@ func TestWriteZipfThroughPut(t *testing.T) {
 		mn.Tags = []Tag{
 			{[]byte("machine"), []byte(strconv.Itoa(ts_id))},
 		}
+		fakeMetric := "machine" + strconv.Itoa(ts_id)
+		inputLabel := promlabels.FromStrings("fake_metric", fakeMetric)
+
 		mr := &metricRows[ts_id]
 		mr.MetricNameRaw = mn.marshalRaw(mr.MetricNameRaw[:0])
-		promcache.NewSketchCacheInstance(mr.MetricNameRaw, "quantile_over_time", 100000000, 100000, 10000)
-		promcache.NewSketchCacheInstance(mr.MetricNameRaw, "sum_over_time", 100000000, 100000, 10000)
-		promcache.NewSketchCacheInstance(mr.MetricNameRaw, "count_over_time", 100000000, 100000, 10000)
+		promcache.NewSketchCacheInstance(inputLabel, "quantile_over_time", 100000000, 100000, 10000)
+		promcache.NewSketchCacheInstance(inputLabel, "sum_over_time", 100000000, 100000, 10000)
+		promcache.NewSketchCacheInstance(inputLabel, "count_over_time", 100000000, 100000, 10000)
+		plabels = append(plabels, inputLabel)
 		// promcache.NewSketchCacheInstance(inputLabel, "entropy_over_time", 100000000, 100000, 10000)
 
 	}
 
 	tNow := time.Now()
-	ingestZipfScrapes(s, metricRows, scrapeCountBatch, promcache)
+	ingestZipfScrapes(s, metricRows, scrapeCountBatch, promcache, plabels)
 	since := time.Since(tNow)
 
 	throughput := 43200.0 * float64(num_ts) / float64(since.Seconds())
@@ -128,7 +134,7 @@ func TestWriteZipfThroughPut(t *testing.T) {
 
 }
 
-func ingestZipfScrapes(st *Storage, mrs []MetricRow, scrapeTotCount int, promcache *promsketch.PromSketches) {
+func ingestZipfScrapes(st *Storage, mrs []MetricRow, scrapeTotCount int, promcache *promsketch.PromSketches, plabels []promlabels.Labels) {
 	var wg sync.WaitGroup
 	scrapeBatch := 100
 	const second = 100
@@ -148,15 +154,17 @@ func ingestZipfScrapes(st *Storage, mrs []MetricRow, scrapeTotCount int, promcac
 				var s float64 = 1.01
 				var v float64 = 1
 				var RAND *rand.Rand = rand.New(rand.NewSource(time.Now().Unix()))
+				var RAND1 *rand.Rand = rand.New(rand.NewSource(time.Now().Unix()))
 				z := rand.NewZipf(RAND, s, v, uint64(100000))
+				z1 := rand.NewZipf(RAND1, s, v, uint64(100000))
 
 				var wg_sketch sync.WaitGroup
 				go func() {
 					defer wg_sketch.Done()
 					for j := 0; j < scrapeBatch; j++ {
 						ts := int64(j*second) + currTime
-						for _, mr := range batch {
-							err := promcache.SketchInsertVM(mr.MetricNameRaw, ts, float64(z.Uint64()))
+						for k := range len(batch) {
+							err := promcache.SketchInsert(plabels[k], ts, float64(z1.Uint64()))
 							if err != nil {
 								panic(err)
 							}
