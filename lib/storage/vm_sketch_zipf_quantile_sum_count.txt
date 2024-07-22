@@ -14,3 +14,31 @@ ingestion completed
 === RUN   TestWriteZipfThroughPutSketch
 2024-07-22T03:58:51.674Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
 2024-07-22T03:58:51.701Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:132: 1000 37.000991596 1.1675362777215447e+06
+--- PASS: TestWriteZipfThroughPutSketch (38.95s)
+=== RUN   TestWriteZipfThroughPutSketch
+2024-07-22T03:59:30.556Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T03:59:30.590Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:132: 1000 36.55236246 1.1818661528998201e+06
+--- PASS: TestWriteZipfThroughPutSketch (38.78s)
+=== RUN   TestWriteZipfThroughPutSketch
+2024-07-22T04:00:09.346Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T04:00:09.377Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:132: 1000 36.903501467 1.170620626301016e+06
+--- PASS: TestWriteZipfThroughPutSketch (38.88s)
+PASS
+ok  	github.com/VictoriaMetrics/VictoriaMetrics/lib/storage	195.661s
+=== RUN   TestWriteZipfThroughPutSketch
+2024-07-22T04:00:48.853Z	info	lib/memory/memory.go:42	limiting caches to 242618914406 bytes, leaving 161745942938 bytes to the OS according to -memory.allowedPercent=60
+2024-07-22T04:00:49.720Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T04:00:49.759Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:132: 10000 180.982084556 2.3869765952791274e+06
+--- PASS: TestWriteZipfThroughPutSketch (186.75s)
+=== RUN   TestWriteZipfThroughPutSketch
+2024-07-22T04:03:56.267Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T04:03:56.355Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+2024-07-22T04:05:39.828Z	info	lib/storage/partition.go:1462	merged (12 parts, 144641000 rows, 120000 blocks, 437744809 bytes) into (1 part, 144641000 rows, 20000 blocks, 406647267 bytes) in 37.928 seconds at 3813563 rows/sec to "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/17E46D3603F8D1D0"
