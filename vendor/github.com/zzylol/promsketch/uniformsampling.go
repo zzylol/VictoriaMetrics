@@ -145,25 +145,43 @@ func quantiles(qs []float64, values []float64) (quantiles []float64) {
 	return quantiles
 }
 
-func (s *UniformSampling) QueryQuantile(phis []float64) []float64 {
+func (s *UniformSampling) QueryQuantile(phis []float64, t1, t2 int64) []float64 {
 	values := make([]float64, len(s.Arr))
 	for i, v := range s.Arr {
+		if v.T < t1 {
+			continue
+		}
+		if v.T > t2 {
+			break
+		}
 		values[i] = v.F
 	}
 	return quantiles(phis, values)
 }
 
-func (s *UniformSampling) QuerySum() float64 {
+func (s *UniformSampling) QuerySum(t1, t2 int64) float64 {
 	var sum float64 = 0
 	for _, v := range s.Arr {
+		if v.T < t1 {
+			continue
+		}
+		if v.T > t2 {
+			break
+		}
 		sum += v.F
 	}
 	return sum / float64(s.Sampling_rate)
 }
 
-func (s *UniformSampling) QueryMax() float64 {
+func (s *UniformSampling) QueryMax(t1, t2 int64) float64 {
 	var max float64 = 0
 	for _, v := range s.Arr {
+		if v.T < t1 {
+			continue
+		}
+		if v.T > t2 {
+			break
+		}
 		if v.F > max {
 			max = v.F
 		}
@@ -171,9 +189,15 @@ func (s *UniformSampling) QueryMax() float64 {
 	return max
 }
 
-func (s *UniformSampling) QueryMin() float64 {
+func (s *UniformSampling) QueryMin(t1, t2 int64) float64 {
 	var min float64 = s.Arr[0].F
 	for _, v := range s.Arr {
+		if v.T < t1 {
+			continue
+		}
+		if v.T > t2 {
+			break
+		}
 		if v.F < min {
 			min = v.F
 		}
@@ -181,21 +205,43 @@ func (s *UniformSampling) QueryMin() float64 {
 	return min
 }
 
-func (s *UniformSampling) QuerySum2() float64 {
+func (s *UniformSampling) QuerySum2(t1, t2 int64) float64 {
 	var sum2 float64 = 0
 	for _, v := range s.Arr {
+		if v.T < t1 {
+			continue
+		}
+		if v.T > t2 {
+			break
+		}
 		sum2 += v.F * v.F
 	}
 	return sum2 / float64(s.Sampling_rate)
 }
 
-func (s *UniformSampling) QueryCount() float64 {
-	return float64(len(s.Arr)) / float64(s.Sampling_rate)
+func (s *UniformSampling) QueryCount(t1, t2 int64) float64 {
+	var count float64 = 0
+	for _, v := range s.Arr {
+		if v.T < t1 {
+			continue
+		}
+		if v.T > t2 {
+			break
+		}
+		count += 1
+	}
+	return float64(count) / float64(s.Sampling_rate)
 }
 
-func (s *UniformSampling) QueryL1() float64 {
+func (s *UniformSampling) QueryL1(t1, t2 int64) float64 {
 	m := make(map[float64]int)
 	for _, v := range s.Arr {
+		if v.T < t1 {
+			continue
+		}
+		if v.T > t2 {
+			break
+		}
 		if _, ok := m[v.F]; !ok {
 			m[v.F] = 1
 		} else {
@@ -209,9 +255,15 @@ func (s *UniformSampling) QueryL1() float64 {
 	return l1
 }
 
-func (s *UniformSampling) QueryL2() float64 {
+func (s *UniformSampling) QueryL2(t1, t2 int64) float64 {
 	m := make(map[float64]int)
 	for _, v := range s.Arr {
+		if v.T < t1 {
+			continue
+		}
+		if v.T > t2 {
+			break
+		}
 		if _, ok := m[v.F]; !ok {
 			m[v.F] = 1
 		} else {
@@ -225,9 +277,15 @@ func (s *UniformSampling) QueryL2() float64 {
 	return math.Sqrt(l2)
 }
 
-func (s *UniformSampling) QueryEntropy() float64 {
+func (s *UniformSampling) QueryEntropy(t1, t2 int64) float64 {
 	m := make(map[float64]int)
 	for _, v := range s.Arr {
+		if v.T < t1 {
+			continue
+		}
+		if v.T > t2 {
+			break
+		}
 		if _, ok := m[v.F]; !ok {
 			m[v.F] = 1
 		} else {
@@ -238,12 +296,18 @@ func (s *UniformSampling) QueryEntropy() float64 {
 	for _, v := range m {
 		entropy += float64(v) * math.Log2(float64(v))
 	}
-	return math.Log2(float64(len(m))) - entropy/float64(len(m))
+	return entropy
 }
 
-func (s *UniformSampling) QueryDistinct() float64 {
+func (s *UniformSampling) QueryDistinct(t1, t2 int64) float64 {
 	m := make(map[float64]int)
 	for _, v := range s.Arr {
+		if v.T < t1 {
+			continue
+		}
+		if v.T > t2 {
+			break
+		}
 		m[v.F] = 1
 	}
 	return float64(len(m))

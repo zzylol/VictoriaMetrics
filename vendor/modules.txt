@@ -628,7 +628,7 @@ github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches/util/zeropool
 # github.com/zzylol/prometheus-sketch-VLDB/uniform-sampling-caching/prometheus v0.0.0-20240721184043-da74cb96bc9c
 ## explicit; go 1.22.3
 github.com/zzylol/prometheus-sketch-VLDB/uniform-sampling-caching/prometheus/model/labels
-# github.com/zzylol/promsketch v0.2.6
+# github.com/zzylol/promsketch v0.2.7
 ## explicit; go 1.22.3
 github.com/zzylol/promsketch
 # go.opencensus.io v0.24.0

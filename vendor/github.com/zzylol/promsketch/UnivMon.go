@@ -6,8 +6,7 @@ import (
 	"hash"
 	"hash/fnv"
 	"math"
-
-	"github.com/cespare/xxhash/v2"
+	"unsafe"
 	//"strconv"
 )
 
@@ -94,16 +93,18 @@ func (us UnivSketch) Free() {
 
 func (us UnivSketch) GetMemoryKB() float64 {
 	var total_topk float64 = 0
+
 	for i := 0; i < us.layer; i++ {
-		total_topk += us.HH_layers[i].topK.GetMemoryBytes()
+		total_topk += float64(unsafe.Sizeof(us.HH_layers[i].topK))
 	}
+
 	return (float64(CS_COL_NO_Univ)*float64(CS_ROW_NO_Univ)*float64(us.layer)*8 + total_topk) / 1024
 }
 
 // Update Universal Sketch
 
 // find the last possible layer for each key
-func (us UnivSketch) findBottomLayerNum(hash uint64, layer int) int {
+func findBottomLayerNum(hash uint64, layer int) int {
 	// optimization -- hash only once
 	// if hash mod 2 == 1, go down
 	for l := 0; l < layer-1; l++ {
@@ -116,7 +117,7 @@ func (us UnivSketch) findBottomLayerNum(hash uint64, layer int) int {
 
 // update multiple layers from top to bottom_layer_num
 // insert a key into Universal Sketch
-func (us UnivSketch) update(key string, value int64, bottom_layer_num int) {
+func (us UnivSketch) update(key string, value int64, bottom_layer_num int, pos [][]int32, sign [][]int32) {
 	// t := time.Now()
 	// update item key to the bottom CS layer only
 
@@ -129,7 +130,7 @@ func (us UnivSketch) update(key string, value int64, bottom_layer_num int) {
 	// r := rand.Intn(10)
 	// if r == 0 {
 	for l := 0; l <= bottom_layer_num; l++ {
-		median_count := us.cs_layers[l].UpdateAndEstimateString(key, value) // add item key to the layer
+		median_count := us.cs_layers[l].UpdateAndEstimateString(key, value, pos[l], sign[l]) // add item key to the layer
 		us.HH_layers[l].topK.Update(key, median_count)
 	}
 	// }
@@ -137,18 +138,22 @@ func (us UnivSketch) update(key string, value int64, bottom_layer_num int) {
 	// fmt.Println("topk update time=", since)
 }
 
-func (us UnivSketch) univmon_processing(key string, value int64) {
+func (us UnivSketch) univmon_processing(key string, value int64, bottom_layer_num int, pos [][]int32, sign [][]int32) {
 	// t := time.Now()
 	// hash := wyhash.Hash([]byte(key), uint64(us.seed))
-	hash := xxhash.Sum64String(key)
+	/*
+		hash := xxhash.Sum64String(key)
+	*/
 	// since := time.Since(t)
 	// fmt.Println("hash key time=", since)
 	// t = time.Now()
-	bottom_layer_num := us.findBottomLayerNum(hash, CS_LVLS)
+	/*
+		bottom_layer_num := us.findBottomLayerNum(hash, CS_LVLS)
+	*/
 	// since = time.Since(t)
 	// fmt.Println("find bottom layer time=", since)
 	// t = time.Now()
-	us.update(key, value, bottom_layer_num)
+	us.update(key, value, bottom_layer_num, pos, sign)
 	// since = time.Since(t)
 	// fmt.Println("univmon update time=", since)
 }

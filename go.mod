@@ -115,7 +115,7 @@ require (
 	github.com/zzylol/go-kll v0.0.0-20240604180517-e15a688e6ebe // indirect
 	github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches v0.0.0-20240721184043-da74cb96bc9c // indirect
 	github.com/zzylol/prometheus-sketch-VLDB/uniform-sampling-caching/prometheus v0.0.0-20240721184043-da74cb96bc9c // indirect
-	github.com/zzylol/promsketch v0.2.6 // indirect
+	github.com/zzylol/promsketch v0.2.7 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/collector/pdata v1.11.0 // indirect
 	go.opentelemetry.io/collector/semconv v0.104.0 // indirect

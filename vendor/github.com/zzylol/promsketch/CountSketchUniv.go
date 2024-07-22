@@ -190,8 +190,10 @@ func (s CountSketchUniv) EstimateStringCount(key string) int64 {
 	*/
 }
 
-func (s CountSketchUniv) UpdateAndEstimateString(key string, count int64) int64 {
-	pos, sign := s.position_and_sign([]byte(key))
+func (s CountSketchUniv) UpdateAndEstimateString(key string, count int64, pos []int32, sign []int32) int64 {
+	/*
+		pos, sign := s.position_and_sign([]byte(key))
+	*/
 	for r, c := range pos {
 		cur_count := s.count[r][c]
 		s.count[r][c] += int64(sign[r]) * count

@@ -1,6 +1,9 @@
 package promsketch
 
 import (
+	"math"
+	"sort"
+
 	"github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches/util/zeropool"
 )
 
@@ -13,8 +16,8 @@ const CM_COL_NO int = 1000
 
 // for UnivMon
 const CS_ROW_NO_Univ int = 3
-const CS_COL_NO_Univ int = 512
-const CS_LVLS int = 4
+const CS_COL_NO_Univ int = 2048
+const CS_LVLS int = 16
 
 const CS_ROW_NO int = 5
 const CS_COL_NO int = 4096
@@ -91,6 +94,47 @@ var (
 		return tmp
 	})
 )
+
+func Min(a []float64) (min float64) {
+	min = 200
+	for _, x := range a {
+		if min > x {
+			min = x
+		}
+	}
+	return min
+}
+
+func Max(a []float64) (max float64) {
+	max = 0
+	for _, x := range a {
+		if max < x {
+			max = x
+		}
+	}
+	return max
+}
+
+func Median(a []float64) (median float64) {
+	sort.Float64s(a)
+	l := len(a)
+	if l == 0 {
+		return math.NaN()
+	} else if l%2 == 0 {
+		median = (a[l/2-1] + a[l/2]) / 2
+	} else {
+		median = a[l/2]
+	}
+	return median
+}
+
+// TODO
+func MedianOfFive(a, b, c, d, e int64) int64 {
+	if a <= c && b <= c && c <= d && c <= e || a <= c && d <= c && c <= b && c <= e || a <= c && e <= c && c <= b && c <= d {
+		return c
+	}
+	return a
+}
 
 func MedianOfThree(a, b, c int64) int64 {
 	if a <= b && b <= c || c <= b && b <= a {

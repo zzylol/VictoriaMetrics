@@ -622,8 +622,22 @@ func (ps *PromSketches) SketchInsert(lset labels.Labels, t int64, val float64) e
 	}
 
 	if s.sketchInstances.shuniv != nil {
-		s.MemPartAppend(t, val)
-		// s.sketchInstances.shuniv.Update(t, strconv.FormatFloat(val, 'f', -1, 64))
+		// s.MemPartAppend(t, val)
+		s.sketchInstances.shuniv.Update(t, strconv.FormatFloat(val, 'f', -1, 64))
+		/*
+			go func() {
+				for s.memoryPart.GetLen() >= 500 { // s.memoryPart should be a FIFO queue and concurrency safe; TODO: find a efficient impl
+					for i := 0; i < 500; i++ {
+						item, err := s.memoryPart.Dequeue()
+						if err != nil {
+							fmt.Println("memory queue dequeue error")
+							break
+						}
+						s.sketchInstances.shuniv.Update(item.(Sample).T, strconv.FormatFloat(item.(Sample).F, 'f', -1, 64))
+					}
+				}
+			}()
+		*/
 	}
 
 	if s.sketchInstances.ehdd != nil {

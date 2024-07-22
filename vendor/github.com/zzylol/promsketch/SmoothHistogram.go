@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/RoaringBitmap/roaring"
+	"github.com/cespare/xxhash/v2"
 	// "github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches/promql"
 )
 
@@ -103,7 +104,7 @@ func SmoothInitUnivMon(beta float64, time_window_size int64) (shu *SmoothHistogr
 
 	shu.univPool = UnivSketchPool{pool: make([]UnivSketch, UnivPoolCAP), size: 0, max_size: UnivPoolCAP}
 	for i := uint32(0); i < UnivPoolCAP; i++ {
-		shu.univPool.pool[i], _ = NewUnivSketch(TOPK_SIZE, CS_ROW_NO_Univ, CS_COL_NO_Univ, CS_LVLS, shu.cs_seed1, shu.cs_seed2, shu.seed3, int64(i))
+		shu.univPool.pool[i], _ = NewUnivSketch(TOPK_SIZE, CS_ROW_NO_Univ, CS_COL_NO_Univ, CS_LVLS, shu.cs_seed1, shu.cs_seed2, shu.seed3, int64(i)) // same parameters, mergability
 	}
 	shu.univPool.bm = roaring.New()
 
@@ -130,6 +131,7 @@ func (shu *SmoothHistogramUnivMon) GetMemory() float64 {
 	var total_mem float64 = 0
 	for i := 0; i < shu.s_count; i++ {
 		total_mem += shu.univs[i].GetMemoryKB()
+		// fmt.Println(shu.univs[i].GetMemoryKB())
 	}
 	return total_mem
 }
@@ -209,20 +211,6 @@ func (shu *SmoothHistogramUnivMon) PutUnivSketch(u UnivSketch) error {
 func (shu *SmoothHistogramUnivMon) Update(time_ int64, value string) {
 	// t_now := time.Now()
 	// var wg sync.WaitGroup
-	for i := 0; i < shu.s_count; i++ {
-		// start := time.Now()
-		// wg.Add(1)
-		// go func(value string, i int) {
-		shu.univs[i].univmon_processing(value, 1)
-		shu.univs[i].max_time = time_ // time-based window
-		// wg.Done()
-		// }(value, i)
-		// since := time.Since(start)
-		// fmt.Println("univmon_processing time=", since)
-	}
-	// wg.Wait()
-	// since := time.Since(t_now)
-	// fmt.Println("shuniv univ update time=", since)
 
 	// init new UnivMon
 	// t_now = time.Now()
@@ -234,8 +222,33 @@ func (shu *SmoothHistogramUnivMon) Update(time_ int64, value string) {
 	}
 	tmp.max_time, tmp.min_time = time_, time_
 	shu.univs = append(shu.univs, tmp)
-	shu.univs[shu.s_count].univmon_processing(value, 1)
+	// optimization: calculate hashes for the same key among SH buckets because of mergability
+	hash := xxhash.Sum64String(value)
+	bottom_layer_num := findBottomLayerNum(hash, CS_LVLS)
+	pos := make([][]int32, 0)
+	sign := make([][]int32, 0)
+	for l := 0; l <= bottom_layer_num; l++ {
+		p, si := shu.univs[0].cs_layers[l].position_and_sign([]byte(value))
+		pos = append(pos, p)
+		sign = append(sign, si)
+	}
+	shu.univs[shu.s_count].univmon_processing(value, 1, bottom_layer_num, pos, sign)
 	shu.s_count++
+
+	for i := 0; i < shu.s_count; i++ {
+		// start := time.Now()
+		// wg.Add(1)
+		// go func(value string, i int) {
+		shu.univs[i].univmon_processing(value, 1, bottom_layer_num, pos, sign)
+		shu.univs[i].max_time = time_ // time-based window
+		// wg.Done()
+		// }(value, i)
+		// since := time.Since(start)
+		// fmt.Println("univmon_processing time=", since)
+	}
+	// wg.Wait()
+	// since := time.Since(t_now)
+	// fmt.Println("shuniv univ update time=", since)
 
 	// t_now = time.Now()
 	// fmt.Println("s_count=", shu.s_count)
@@ -316,7 +329,7 @@ func (shu *SmoothHistogramUnivMon) Update(time_ int64, value string) {
 
 /*
 Merge the universal sketches to the interval of t1 to t2;
-cur_t - time_window_size <= t1 < = t2 <= cur_t
+cur_t - time_window_size <= t1 <= t2 <= cur_t
 */
 func (shu *SmoothHistogramUnivMon) QueryIntervalMergeUniv(t1, t2 int64) (univ UnivSketch, err error) {
 	var diff1, diff2 int64 = math.MaxInt64, math.MaxInt64

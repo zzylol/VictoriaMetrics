@@ -189,7 +189,7 @@ func NewSamplingCacheSeries(stripeSize int) *SamplingCacheSeries {
 }
 
 func NewSamplingCache() *SamplingCache {
-	ss := NewSamplingCacheSeries(5)
+	ss := NewSamplingCacheSeries(10)
 	sc := &SamplingCache{
 		series: ss,
 	}

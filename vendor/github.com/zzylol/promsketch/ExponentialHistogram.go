@@ -12,6 +12,7 @@ import (
 
 	"github.com/DataDog/sketches-go/ddsketch"
 	"github.com/RoaringBitmap/roaring"
+	"github.com/cespare/xxhash/v2"
 	"github.com/zzylol/go-kll"
 	// "github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches/promql"
 )
@@ -833,7 +834,17 @@ func (ehu *ExpoHistogramUniv) Update(time_ int64, fvalue float64) {
 	tmp.max_time, tmp.min_time = time_, time_
 	tmp.bucketsize = 1
 	ehu.univs = append(ehu.univs, tmp)
-	ehu.univs[ehu.s_count].univmon_processing(value, 1)
+	hash := xxhash.Sum64String(value)
+	bottom_layer_num := findBottomLayerNum(hash, CS_LVLS)
+	pos := make([][]int32, 0)
+	sign := make([][]int32, 0)
+	for l := 0; l <= bottom_layer_num; l++ {
+		p, si := ehu.univs[0].cs_layers[l].position_and_sign([]byte(value))
+		pos = append(pos, p)
+		sign = append(sign, si)
+	}
+
+	ehu.univs[ehu.s_count].univmon_processing(value, 1, bottom_layer_num, pos, sign)
 	ehu.s_count++
 
 	// since = time.Since(t_now)
