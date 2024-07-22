@@ -1,0 +1,10 @@
+=== RUN   TestWriteZipfThroughPutSketch
+2024-07-22T03:45:16.854Z	info	lib/memory/memory.go:42	limiting caches to 242618914406 bytes, leaving 161745942938 bytes to the OS according to -memory.allowedPercent=60
+2024-07-22T03:45:17.054Z	info	lib/storage/partition.go:1936	deleting "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/17E46C27FCD443BA" because it isn't listed in "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/parts.json"; this is the expected case after unclean shutdown
+2024-07-22T03:46:49.089Z	info	lib/storage/partition.go:1462	merged (11 parts, 127497002 rows, 110000 blocks, 389100600 bytes) into (1 part, 127497002 rows, 20000 blocks, 358474012 bytes) in 33.905 seconds at 3760443 rows/sec to "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/17E46C316C598356"
+2024-07-22T03:47:39.959Z	info	lib/storage/partition.go:1462	merged (11 parts, 124759000 rows, 110000 blocks, 371639491 bytes) into (1 part, 124759000 rows, 20000 blocks, 347691336 bytes) in 32.396 seconds at 3851080 rows/sec to "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/17E46C316C598362"
+ingestion completed
+    storage_writethroughput_test.go:132: 10000 180.331311491 2.3955906294263285e+06
+--- PASS: TestWriteZipfThroughPutSketch (186.70s)
+PASS
+ok  	github.com/VictoriaMetrics/VictoriaMetrics/lib/storage	187.385s

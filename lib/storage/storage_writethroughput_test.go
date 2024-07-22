@@ -10,6 +10,9 @@ import (
 	"sync/atomic"
 	"testing"
 	"time"
+
+	promlabels "github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches/model/labels"
+	"github.com/zzylol/promsketch"
 )
 
 var flagvar int
@@ -88,8 +91,7 @@ func ingestNormalScrapes(st *Storage, mrs []MetricRow, scrapeTotCount int) {
 	fmt.Println("ingestion completed")
 }
 
-/*
-func TestWriteZipfThroughPutSketches(t *testing.T) {
+func TestWriteZipfThroughPutSketch(t *testing.T) {
 	scrapeCountBatch := 43200 // seconds, 12 hours
 	num_ts := flagvar
 	path := "BenchmarkStorageWriteThoughput"
@@ -139,34 +141,47 @@ func ingestZipfScrapesSketches(st *Storage, mrs []MetricRow, scrapeTotCount int,
 		currTime := int64(i * second)
 		lbls := mrs
 		var wg sync.WaitGroup
+		var start_lbl int = 0
 		for len(lbls) > 0 {
 			b := 1000
+			if len(lbls) < 1000 {
+				b = len(lbls)
+			}
 			batch := lbls[:b]
 			lbls = lbls[b:]
 			wg.Add(1)
-			go func(currTime int64) {
+			go func(currTime int64, start_lbl int) {
 				defer wg.Done()
 
 				var RAND *rand.Rand = rand.New(rand.NewSource(time.Now().Unix()))
-				var RAND1 *rand.Rand = rand.New(rand.NewSource(time.Now().Unix()))
 				z := rand.NewZipf(RAND, 1.01, 1, uint64(100000))
-				z1 := rand.NewZipf(RAND1, 1.01, 1, uint64(100000))
 
 				var wg_sketch sync.WaitGroup
 				wg_sketch.Add(1)
-				go func() {
+				go func(start_lbl int, currTime int64) {
 					defer wg_sketch.Done()
 					for j := 0; j < scrapeBatch; j++ {
 						ts := int64(j*second) + currTime
-						for k := range len(plabels) {
-							err := promcache.SketchInsert(plabels[k], ts, float64(z1.Uint64()))
-							if err != nil {
-								panic(err)
-							}
+						var wg_labels sync.WaitGroup
+						// fmt.Println("startlbl=", start_lbl)
+						for k := 0; k < len(batch); k += 100 {
+							wg_labels.Add(1)
+							go func(k int, start_lbl int, ts int64) {
+								defer wg_labels.Done()
+								var RAND1 *rand.Rand = rand.New(rand.NewSource(time.Now().Unix()))
+								z1 := rand.NewZipf(RAND1, 1.01, 1, uint64(100000))
+								for l := k; l < k+100; l++ {
+									// fmt.Println(start_lbl+l, ts)
+									err := promcache.SketchInsert(plabels[start_lbl+l], ts, float64(z1.Uint64()))
+									if err != nil {
+										panic(err)
+									}
+								}
+							}(k, start_lbl, ts)
 						}
-
+						wg_labels.Wait()
 					}
-				}()
+				}(start_lbl, currTime)
 
 				for j := 0; j < scrapeBatch; j++ {
 					rowsToInsert := make([]MetricRow, 0, len(batch))
@@ -182,14 +197,14 @@ func ingestZipfScrapesSketches(st *Storage, mrs []MetricRow, scrapeTotCount int,
 					}
 				}
 				wg_sketch.Wait()
-			}(currTime)
+			}(currTime, start_lbl)
+			start_lbl += b
 		}
 		wg.Wait()
 	}
 
 	fmt.Println("ingestion completed")
 }
-*/
 
 func TestWriteZipfThroughPut(t *testing.T) {
 	scrapeCountBatch := 43200 // seconds, 12 hours
