@@ -1,0 +1,4 @@
+=== RUN   TestWriteZipfThroughPut
+2024-07-22T01:40:04.251Z	info	lib/memory/memory.go:42	limiting caches to 242618914406 bytes, leaving 161745942938 bytes to the OS according to -memory.allowedPercent=60
+2024-07-22T01:40:04.577Z	info	lib/storage/partition.go:1936	deleting "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/17E465443E3F61DB" because it isn't listed in "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/parts.json"; this is the expected case after unclean shutdown
+2024-07-22T01:40:04.627Z	info	lib/storage/partition.go:1936	deleting "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/17E465443E3F61E0" because it isn't listed in "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/parts.json"; this is the expected case after unclean shutdown
