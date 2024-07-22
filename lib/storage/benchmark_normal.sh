@@ -1,0 +1,9 @@
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPut ./ -numts=1000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPut ./ -numts=10000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPut ./ -numts=25000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPut ./ -numts=50000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPut ./ -numts=75000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPut ./ -numts=100000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPut ./ -numts=150000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPut ./ -numts=200000
+go test -v  -count=5  -timeout 0 -run TestWriteNormalThroughPut ./ -numts=500000

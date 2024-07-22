@@ -1,0 +1,9 @@
+go test -v  -count=5  -timeout 0 -run TestWriteZipfThroughPut ./ -numts=1000
+go test -v  -count=5  -timeout 0 -run TestWriteZipfThroughPut ./ -numts=10000
+go test -v  -count=5  -timeout 0 -run TestWriteZipfThroughPut ./ -numts=25000
+go test -v  -count=5  -timeout 0 -run TestWriteZipfThroughPut ./ -numts=50000
+go test -v  -count=5  -timeout 0 -run TestWriteZipfThroughPut ./ -numts=75000
+go test -v  -count=5  -timeout 0 -run TestWriteZipfThroughPut ./ -numts=100000
+go test -v  -count=5  -timeout 0 -run TestWriteZipfThroughPut ./ -numts=150000
+go test -v  -count=5  -timeout 0 -run TestWriteZipfThroughPut ./ -numts=200000
+go test -v  -count=5  -timeout 0 -run TestWriteZipfThroughPut ./ -numts=500000

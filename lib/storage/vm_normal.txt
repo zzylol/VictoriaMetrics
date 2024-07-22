@@ -1,0 +1,29 @@
+=== RUN   TestWriteNormalThroughPut
+2024-07-22T00:41:32.725Z	info	lib/memory/memory.go:42	limiting caches to 242618914406 bytes, leaving 161745942938 bytes to the OS according to -memory.allowedPercent=60
+2024-07-22T00:41:32.976Z	info	lib/storage/partition.go:1936	deleting "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/17E4621FCFB13433" because it isn't listed in "/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01/parts.json"; this is the expected case after unclean shutdown
+ingestion completed
+    storage_writethroughput_test.go:52: 1000 11.375752044 3.7975511274250485e+06
+--- PASS: TestWriteNormalThroughPut (21.93s)
+=== RUN   TestWriteNormalThroughPut
+2024-07-22T00:41:55.342Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T00:41:55.378Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:52: 1000 12.870490422 3.356515453844452e+06
+--- PASS: TestWriteNormalThroughPut (21.04s)
+=== RUN   TestWriteNormalThroughPut
+2024-07-22T00:42:16.331Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T00:42:16.365Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:52: 1000 11.350114212 3.806129100826708e+06
+--- PASS: TestWriteNormalThroughPut (22.21s)
+=== RUN   TestWriteNormalThroughPut
+2024-07-22T00:42:38.553Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T00:42:38.585Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:52: 1000 12.957469753 3.3339842441073842e+06
+--- PASS: TestWriteNormalThroughPut (20.75s)
+=== RUN   TestWriteNormalThroughPut
+2024-07-22T00:42:59.394Z	info	lib/storage/partition.go:199	creating a partition "1970_01" with smallPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/small/1970_01", bigPartsPath="/mydata/VictoriaMetrics/lib/storage/BenchmarkStorageWriteThoughput/data/big/1970_01"
+2024-07-22T00:42:59.423Z	info	lib/storage/partition.go:208	partition "1970_01" has been created
+ingestion completed
+    storage_writethroughput_test.go:52: 1000 11.591892605 3.7267426012354777e+06
