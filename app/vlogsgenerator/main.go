@@ -15,10 +15,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/buildinfo"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/envflag"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/lib/buildinfo"
+	"github.com/zzylol/VictoriaMetrics/lib/envflag"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
 )
 
 var (

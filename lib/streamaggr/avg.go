@@ -3,7 +3,7 @@ package streamaggr
 import (
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 // avgAggrState calculates output=avg, e.g. the average value over input samples.

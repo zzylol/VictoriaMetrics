@@ -125,7 +125,7 @@ spec:
 
 ## Version management
 
-To set `VMAuth` version add `spec.image.tag` name from [releases](https://github.com/VictoriaMetrics/VictoriaMetrics/releases)
+To set `VMAuth` version add `spec.image.tag` name from [releases](https://github.com/zzylol/VictoriaMetrics/releases)
 
 ```yaml
 apiVersion: operator.victoriametrics.com/v1beta1

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/httpserver"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promrelabel"
+	"github.com/zzylol/VictoriaMetrics/lib/httpserver"
+	"github.com/zzylol/VictoriaMetrics/lib/promrelabel"
 )
 
 // WriteMetricRelabelDebug serves requests to /metric-relabel-debug page

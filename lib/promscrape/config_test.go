@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promrelabel"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promscrape/discovery/gce"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/proxy"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/stringsutil"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/promrelabel"
+	"github.com/zzylol/VictoriaMetrics/lib/promscrape/discovery/gce"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/lib/proxy"
+	"github.com/zzylol/VictoriaMetrics/lib/stringsutil"
 )
 
 func TestMergeLabels(t *testing.T) {
@@ -272,7 +272,7 @@ scrape_configs:
 }
 
 func TestBlackboxExporter(t *testing.T) {
-	// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/684
+	// See https://github.com/zzylol/VictoriaMetrics/issues/684
 	data := `
 scrape_configs:
   - job_name: 'blackbox'

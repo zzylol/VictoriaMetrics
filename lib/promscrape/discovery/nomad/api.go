@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promscrape/discoveryutils"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/promscrape/discoveryutils"
 )
 
 var waitTime = flag.Duration("promscrape.nomad.waitTime", 0, "Wait time used by Nomad service discovery. Default value is used if not set")

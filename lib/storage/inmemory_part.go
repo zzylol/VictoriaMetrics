@@ -3,11 +3,11 @@ package storage
 import (
 	"path/filepath"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/cgroup"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fasttime"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fs"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/cgroup"
+	"github.com/zzylol/VictoriaMetrics/lib/fasttime"
+	"github.com/zzylol/VictoriaMetrics/lib/fs"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // inmemoryPart represents in-memory partition.

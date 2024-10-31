@@ -7,8 +7,8 @@ package promrelabel
 //line lib/promrelabel/debug.qtpl:1
 import (
 	"fmt"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/htmlcomponents"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/lib/htmlcomponents"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
 )
 
 //line lib/promrelabel/debug.qtpl:9

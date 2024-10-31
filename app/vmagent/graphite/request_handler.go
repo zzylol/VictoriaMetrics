@@ -3,13 +3,13 @@ package graphite
 import (
 	"io"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmagent/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmagent/remotewrite"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/auth"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
-	parser "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/graphite"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/graphite/stream"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/app/vmagent/common"
+	"github.com/zzylol/VictoriaMetrics/app/vmagent/remotewrite"
+	"github.com/zzylol/VictoriaMetrics/lib/auth"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
+	parser "github.com/zzylol/VictoriaMetrics/lib/protoparser/graphite"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/graphite/stream"
 )
 
 var (

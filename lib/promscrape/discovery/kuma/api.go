@@ -14,11 +14,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promscrape/discoveryutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/promscrape/discoveryutils"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
 )
 
 var configMap = discoveryutils.NewConfigMap()

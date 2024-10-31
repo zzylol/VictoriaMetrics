@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/auth"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/auth"
 )
 
 const (

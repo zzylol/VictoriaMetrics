@@ -3,16 +3,16 @@ package datadogv1
 import (
 	"net/http"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmagent/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmagent/remotewrite"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/auth"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
-	parserCommon "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/datadogutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/datadogv1"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/datadogv1/stream"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/tenantmetrics"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/app/vmagent/common"
+	"github.com/zzylol/VictoriaMetrics/app/vmagent/remotewrite"
+	"github.com/zzylol/VictoriaMetrics/lib/auth"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
+	parserCommon "github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/datadogutils"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/datadogv1"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/datadogv1/stream"
+	"github.com/zzylol/VictoriaMetrics/lib/tenantmetrics"
 )
 
 var (

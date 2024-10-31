@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/utils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/flagutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/httputils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/netutil"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/utils"
+	"github.com/zzylol/VictoriaMetrics/lib/flagutil"
+	"github.com/zzylol/VictoriaMetrics/lib/httputils"
+	"github.com/zzylol/VictoriaMetrics/lib/netutil"
 )
 
 var (

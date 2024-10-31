@@ -10,9 +10,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promscrape/discoveryutils"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/promscrape/discoveryutils"
 )
 
 // SDCheckInterval is check interval for Nomad service discovery.

@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fasttime"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/opentelemetry/pb"
+	"github.com/zzylol/VictoriaMetrics/lib/fasttime"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/opentelemetry/pb"
 )
 
 func TestParseStream(t *testing.T) {

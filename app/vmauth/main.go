@@ -18,16 +18,16 @@ import (
 
 	"github.com/VictoriaMetrics/metrics"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/buildinfo"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/envflag"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/flagutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/httpserver"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/netutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/procutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/pushmetrics"
+	"github.com/zzylol/VictoriaMetrics/lib/buildinfo"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/envflag"
+	"github.com/zzylol/VictoriaMetrics/lib/flagutil"
+	"github.com/zzylol/VictoriaMetrics/lib/httpserver"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/netutil"
+	"github.com/zzylol/VictoriaMetrics/lib/procutil"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/pushmetrics"
 )
 
 var (
@@ -186,7 +186,7 @@ func processRequest(w http.ResponseWriter, r *http.Request, ui *UserInfo) {
 		if ui.DefaultURL == nil {
 			// Authorization should be requested for http requests without credentials
 			// to a route that is not in the configuration for unauthorized user.
-			// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/5236
+			// See https://github.com/zzylol/VictoriaMetrics/issues/5236
 			if ui.BearerToken == "" && ui.Username == "" && len(*authUsers.Load()) > 0 {
 				handleMissingAuthorizationError(w)
 				return
@@ -306,7 +306,7 @@ func tryProcessingRequest(w http.ResponseWriter, r *http.Request, targetURL *url
 			return true, false
 		}
 		// Retry requests at other backends if it matches retryStatusCodes.
-		// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/4893
+		// See https://github.com/zzylol/VictoriaMetrics/issues/4893
 		remoteAddr := httpserver.GetQuotedRemoteAddr(r)
 		// NOTE: do not use httpserver.GetRequestURI
 		// it explicitly reads request body, which may fail retries.
@@ -458,7 +458,7 @@ func newRoundTripper(caFileOpt, certFileOpt, keyFileOpt, serverNameOpt string, i
 
 	tr := http.DefaultTransport.(*http.Transport).Clone()
 	tr.ResponseHeaderTimeout = *responseTimeout
-	// Automatic compression must be disabled in order to fix https://github.com/VictoriaMetrics/VictoriaMetrics/issues/535
+	// Automatic compression must be disabled in order to fix https://github.com/zzylol/VictoriaMetrics/issues/535
 	tr.DisableCompression = true
 	tr.IdleConnTimeout = *idleConnTimeout
 	tr.MaxIdleConnsPerHost = *maxIdleConnsPerBackend

@@ -9,7 +9,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
 )
 
 func TestConfigWatcherReload(t *testing.T) {

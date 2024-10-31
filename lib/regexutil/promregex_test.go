@@ -97,7 +97,7 @@ func TestPromRegex(t *testing.T) {
 	f("^(?:true)$", "true", true)
 	f("^(?:true)$", "false", false)
 
-	// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/5297
+	// See https://github.com/zzylol/VictoriaMetrics/issues/5297
 	f(".+;|;.+", ";", false)
 	f(".+;|;.+", "foo", false)
 	f(".+;|;.+", "foo;bar", false)

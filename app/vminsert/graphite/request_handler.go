@@ -3,11 +3,11 @@ package graphite
 import (
 	"io"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/relabel"
-	parser "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/graphite"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/graphite/stream"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/common"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/relabel"
+	parser "github.com/zzylol/VictoriaMetrics/lib/protoparser/graphite"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/graphite/stream"
 )
 
 var (

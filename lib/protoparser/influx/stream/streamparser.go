@@ -8,12 +8,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/flagutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/influx"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/writeconcurrencylimiter"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/flagutil"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/influx"
+	"github.com/zzylol/VictoriaMetrics/lib/writeconcurrencylimiter"
 )
 
 var (
@@ -59,7 +59,7 @@ func Parse(r io.Reader, isStreamMode, isGzipped bool, precision, db string, call
 	}
 
 	// processing payload altogether
-	// see https://github.com/VictoriaMetrics/VictoriaMetrics/issues/7090
+	// see https://github.com/zzylol/VictoriaMetrics/issues/7090
 	if !isStreamMode {
 		ctx := getBatchContext(r)
 		defer putBatchContext(ctx)

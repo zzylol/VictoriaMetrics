@@ -6,15 +6,15 @@ import (
 	"os"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/actions"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/fslocal"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/buildinfo"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/envflag"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/flagutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/httpserver"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/pushmetrics"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/actions"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/common"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/fslocal"
+	"github.com/zzylol/VictoriaMetrics/lib/buildinfo"
+	"github.com/zzylol/VictoriaMetrics/lib/envflag"
+	"github.com/zzylol/VictoriaMetrics/lib/flagutil"
+	"github.com/zzylol/VictoriaMetrics/lib/httpserver"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/pushmetrics"
 )
 
 var (

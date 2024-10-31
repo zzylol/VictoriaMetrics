@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/backupnames"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/backupnames"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/common"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // RemoteBackupCopy copies backup from Src to Dst.

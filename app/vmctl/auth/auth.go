@@ -7,7 +7,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fasttime"
+	"github.com/zzylol/VictoriaMetrics/lib/fasttime"
 )
 
 // HTTPClientConfig represents http client config.

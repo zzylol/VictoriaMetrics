@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/apptest"
+	"github.com/zzylol/VictoriaMetrics/apptest"
 )
 
 func TestMultilevelSelect(t *testing.T) {

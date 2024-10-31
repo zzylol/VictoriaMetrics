@@ -3,7 +3,7 @@ package logstorage
 import (
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 func TestArena(t *testing.T) {

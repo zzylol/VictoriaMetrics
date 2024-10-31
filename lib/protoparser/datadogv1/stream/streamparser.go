@@ -6,13 +6,13 @@ import (
 	"io"
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fasttime"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/datadogutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/datadogv1"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/writeconcurrencylimiter"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/fasttime"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/datadogutils"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/datadogv1"
+	"github.com/zzylol/VictoriaMetrics/lib/writeconcurrencylimiter"
 )
 
 // Parse parses DataDog POST request for /api/v1/series from reader and calls callback for the parsed request.

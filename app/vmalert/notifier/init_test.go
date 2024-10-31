@@ -3,7 +3,7 @@ package notifier
 import (
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/flagutil"
+	"github.com/zzylol/VictoriaMetrics/lib/flagutil"
 )
 
 func TestInit(t *testing.T) {

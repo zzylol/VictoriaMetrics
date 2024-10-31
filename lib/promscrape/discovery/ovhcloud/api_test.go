@@ -3,7 +3,7 @@ package ovhcloud
 import (
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
 )
 
 func Test_newAPIConfig(t *testing.T) {

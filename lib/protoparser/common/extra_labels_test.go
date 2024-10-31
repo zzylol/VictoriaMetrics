@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
 )
 
 func TestGetExtraLabelsSuccess(t *testing.T) {

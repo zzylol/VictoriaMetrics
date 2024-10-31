@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
 )
 
 func (ig *Ingress) key() string {

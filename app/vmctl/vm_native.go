@@ -9,15 +9,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/backoff"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/barpool"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/limiter"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/native"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/stepper"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/utils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/vm"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmselect/searchutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/backoff"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/barpool"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/limiter"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/native"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/stepper"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/utils"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/vm"
+	"github.com/zzylol/VictoriaMetrics/app/vmselect/searchutils"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 type vmNativeProcessor struct {

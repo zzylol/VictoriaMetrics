@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // Config represent aws access configuration.

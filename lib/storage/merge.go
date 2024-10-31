@@ -5,8 +5,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/decimal"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/decimal"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // mergeBlockStreams merges bsrs into bsw and updates ph.

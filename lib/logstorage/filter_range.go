@@ -3,7 +3,7 @@ package logstorage
 import (
 	"math"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // filterRange matches the given range [minValue..maxValue].

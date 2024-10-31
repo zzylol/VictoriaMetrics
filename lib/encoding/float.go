@@ -3,7 +3,7 @@ package encoding
 import (
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/slicesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/slicesutil"
 )
 
 // GetFloat64s returns a slice of float64 values with the given size.

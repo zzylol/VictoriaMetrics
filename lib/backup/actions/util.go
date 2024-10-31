@@ -8,11 +8,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/azremote"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/fsremote"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/gcsremote"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/s3remote"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/azremote"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/common"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/fsremote"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/gcsremote"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/s3remote"
 )
 
 var (

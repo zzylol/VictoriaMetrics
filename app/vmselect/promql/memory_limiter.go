@@ -3,7 +3,7 @@ package promql
 import (
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 type memoryLimiter struct {

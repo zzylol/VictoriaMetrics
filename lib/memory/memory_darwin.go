@@ -1,7 +1,7 @@
 package memory
 
 import (
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // This has been adapted from github.com/pbnjay/memory.

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 // filterAnd contains filters joined by AND opertor.

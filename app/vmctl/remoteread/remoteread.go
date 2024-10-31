@@ -11,13 +11,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/vm"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
 	"github.com/gogo/protobuf/proto"
 	"github.com/golang/snappy"
 	"github.com/prometheus/prometheus/prompb"
 	"github.com/prometheus/prometheus/storage/remote"
 	"github.com/prometheus/prometheus/tsdb/chunkenc"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/vm"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 const (

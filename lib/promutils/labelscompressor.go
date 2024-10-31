@@ -5,10 +5,10 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/encoding"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/encoding"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
 )
 
 // LabelsCompressor compresses []prompbmarshal.Label into short binary strings
@@ -64,7 +64,7 @@ func (lc *LabelsCompressor) compress(dst []uint64, labels []prompbmarshal.Label)
 			// so it can be found by possible concurrent goroutines.
 			//
 			// We might store duplicated entries for single label with different indexes,
-			// and it's fine, see https://github.com/VictoriaMetrics/VictoriaMetrics/pull/7118.
+			// and it's fine, see https://github.com/zzylol/VictoriaMetrics/pull/7118.
 			lc.idxToLabel.Store(idx, labelCopy)
 			vNew, loaded := lc.labelToIdx.LoadOrStore(labelCopy, v)
 			if loaded {

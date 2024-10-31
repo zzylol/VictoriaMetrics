@@ -6,12 +6,12 @@ import (
 	"io"
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/encoding"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/storage"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/writeconcurrencylimiter"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/encoding"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	"github.com/zzylol/VictoriaMetrics/lib/storage"
+	"github.com/zzylol/VictoriaMetrics/lib/writeconcurrencylimiter"
 )
 
 // Parse parses /api/v1/import/native lines from req and calls callback for parsed blocks.

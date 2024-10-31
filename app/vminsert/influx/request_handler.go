@@ -6,16 +6,16 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/relabel"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompb"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
-	parserCommon "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	parser "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/influx"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/influx/stream"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/storage"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/common"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/relabel"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/prompb"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
+	parserCommon "github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	parser "github.com/zzylol/VictoriaMetrics/lib/protoparser/influx"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/influx/stream"
+	"github.com/zzylol/VictoriaMetrics/lib/storage"
 )
 
 var (
@@ -93,7 +93,7 @@ func insertRows(db string, rows []parser.Row, extraLabels []prompbmarshal.Label)
 		if !*skipMeasurement {
 			ctx.metricGroupBuf = append(ctx.metricGroupBuf, r.Measurement...)
 		}
-		// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/1139
+		// See https://github.com/zzylol/VictoriaMetrics/issues/1139
 		skipFieldKey := len(r.Measurement) > 0 && len(r.Fields) == 1 && *skipSingleField
 		if len(ctx.metricGroupBuf) > 0 && !skipFieldKey {
 			ctx.metricGroupBuf = append(ctx.metricGroupBuf, *measurementFieldSeparator...)

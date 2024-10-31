@@ -10,7 +10,7 @@
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
 - Human-readable error about Helm version requirement
-- bump version of VM components to [v1.105.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.105.0)
+- bump version of VM components to [v1.105.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.105.0)
 
 ## 0.4.0
 
@@ -19,7 +19,7 @@
 ![AppVersion: v1.104.0](https://img.shields.io/static/v1?label=AppVersion&message=v1.104.0&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.104.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.104.0)
+- bump version of VM components to [v1.104.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.104.0)
 
 ## 0.3.1
 
@@ -39,7 +39,7 @@
 ![AppVersion: v1.103.0](https://img.shields.io/static/v1?label=AppVersion&message=v1.103.0&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.103.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.103.0)
+- bump version of VM components to [v1.103.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.103.0)
 
 ## 0.2.2
 
@@ -48,7 +48,7 @@
 ![AppVersion: v1.102.1](https://img.shields.io/static/v1?label=AppVersion&message=v1.102.1&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.102.1](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.102.1)
+- bump version of VM components to [v1.102.1](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.102.1)
 
 ## 0.2.1
 
@@ -57,7 +57,7 @@
 ![AppVersion: v1.102.0](https://img.shields.io/static/v1?label=AppVersion&message=v1.102.0&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.102.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.102.0)
+- bump version of VM components to [v1.102.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.102.0)
 
 ## 0.2.0
 

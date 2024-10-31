@@ -5,8 +5,8 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promscrape/discoveryutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/lib/promscrape/discoveryutils"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
 )
 
 func TestAddNetworkLabels(t *testing.T) {

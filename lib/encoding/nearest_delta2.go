@@ -3,8 +3,8 @@ package encoding
 import (
 	"fmt"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/slicesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/slicesutil"
 )
 
 // marshalInt64NearestDelta2 encodes src using `nearest delta2` encoding

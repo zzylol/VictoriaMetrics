@@ -6,12 +6,12 @@ import (
 	"io"
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/flagutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/vmimport"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/writeconcurrencylimiter"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/flagutil"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/vmimport"
+	"github.com/zzylol/VictoriaMetrics/lib/writeconcurrencylimiter"
 )
 
 var maxLineLen = flagutil.NewBytes("import.maxLineLen", 10*1024*1024, "The maximum length in bytes of a single line accepted by /api/v1/import; "+

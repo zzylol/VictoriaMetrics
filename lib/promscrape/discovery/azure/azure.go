@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promscrape/discoveryutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/proxy"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/promscrape/discoveryutils"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/lib/proxy"
 )
 
 // SDCheckInterval is check interval for Azure service discovery.

@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promscrape/discoveryutils"
+	"github.com/zzylol/VictoriaMetrics/lib/promscrape/discoveryutils"
 )
 
 var configMap = discoveryutils.NewConfigMap()

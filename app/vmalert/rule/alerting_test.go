@@ -11,12 +11,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/config"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/datasource"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/notifier"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/utils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/config"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/datasource"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/notifier"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/utils"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
 )
 
 func TestAlertingRuleToTimeSeries(t *testing.T) {

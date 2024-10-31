@@ -7,7 +7,7 @@ import (
 	"testing"
 	"testing/quick"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 func TestCommonPrefixLen(t *testing.T) {

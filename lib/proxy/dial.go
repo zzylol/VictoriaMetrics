@@ -12,8 +12,8 @@ import (
 
 	"golang.org/x/net/proxy"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/netutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/netutil"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
 )
 
 // NewDialFunc returns dial func for the given u and ac.

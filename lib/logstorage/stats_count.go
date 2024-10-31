@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"unsafe"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 type statsCount struct {

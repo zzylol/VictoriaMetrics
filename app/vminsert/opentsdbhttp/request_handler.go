@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/relabel"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
-	parserCommon "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	parser "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/opentsdbhttp"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/opentsdbhttp/stream"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/common"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/relabel"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
+	parserCommon "github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	parser "github.com/zzylol/VictoriaMetrics/lib/protoparser/opentsdbhttp"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/opentsdbhttp/stream"
 )
 
 var (

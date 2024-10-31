@@ -3,8 +3,8 @@ package ec2
 import (
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/awsapi"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promscrape/discoveryutils"
+	"github.com/zzylol/VictoriaMetrics/lib/awsapi"
+	"github.com/zzylol/VictoriaMetrics/lib/promscrape/discoveryutils"
 )
 
 type apiConfig struct {

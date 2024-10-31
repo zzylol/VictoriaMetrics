@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/slicesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/slicesutil"
 )
 
 // TableSearch is a reusable cursor used for searching in the Table.

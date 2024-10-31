@@ -13,21 +13,21 @@ import (
 
 	"github.com/VictoriaMetrics/metrics"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/config"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/datasource"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/notifier"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/remoteread"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/remotewrite"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/rule"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/templates"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/buildinfo"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/envflag"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fasttime"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/flagutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/httpserver"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/procutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/pushmetrics"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/config"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/datasource"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/notifier"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/remoteread"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/remotewrite"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/rule"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/templates"
+	"github.com/zzylol/VictoriaMetrics/lib/buildinfo"
+	"github.com/zzylol/VictoriaMetrics/lib/envflag"
+	"github.com/zzylol/VictoriaMetrics/lib/fasttime"
+	"github.com/zzylol/VictoriaMetrics/lib/flagutil"
+	"github.com/zzylol/VictoriaMetrics/lib/httpserver"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/procutil"
+	"github.com/zzylol/VictoriaMetrics/lib/pushmetrics"
 )
 
 var (
@@ -170,7 +170,7 @@ func main() {
 
 	// Register SIGHUP handler for config re-read just before manager.start call.
 	// This guarantees that the config will be re-read if the signal arrives during manager.start call.
-	// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/1240
+	// See https://github.com/zzylol/VictoriaMetrics/issues/1240
 	sighupCh := procutil.NewSighupChan()
 
 	if err := manager.start(ctx, groupsCfg); err != nil {

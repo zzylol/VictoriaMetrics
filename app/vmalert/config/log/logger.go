@@ -3,7 +3,7 @@ package log
 import (
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // Logger is using lib/logger for logging

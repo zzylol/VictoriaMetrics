@@ -4,13 +4,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/relabel"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmstorage"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/httpserver"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompb"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/slicesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/storage"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/relabel"
+	"github.com/zzylol/VictoriaMetrics/app/vmsketch"
+	"github.com/zzylol/VictoriaMetrics/app/vmstorage"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/httpserver"
+	"github.com/zzylol/VictoriaMetrics/lib/prompb"
+	"github.com/zzylol/VictoriaMetrics/lib/slicesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/storage"
 )
 
 // InsertCtx contains common bits for data points insertion.
@@ -93,7 +94,9 @@ func (ctx *InsertCtx) addRow(metricNameRaw []byte, timestamp int64, value float6
 			return err
 		}
 	}
-	return nil
+
+	err := vmsketch.AddRow(metricNameRaw, timestamp, value)
+	return err
 }
 
 // AddLabelBytes adds (name, value) label to ctx.Labels.
@@ -102,7 +105,7 @@ func (ctx *InsertCtx) addRow(metricNameRaw []byte, timestamp int64, value float6
 func (ctx *InsertCtx) AddLabelBytes(name, value []byte) {
 	if len(value) == 0 {
 		// Skip labels without values, since they have no sense.
-		// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/600
+		// See https://github.com/zzylol/VictoriaMetrics/issues/600
 		// Do not skip labels with empty name, since they are equal to __name__.
 		return
 	}
@@ -120,7 +123,7 @@ func (ctx *InsertCtx) AddLabelBytes(name, value []byte) {
 func (ctx *InsertCtx) AddLabel(name, value string) {
 	if len(value) == 0 {
 		// Skip labels without values, since they have no sense.
-		// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/600
+		// See https://github.com/zzylol/VictoriaMetrics/issues/600
 		// Do not skip labels with empty name, since they are equal to __name__.
 		return
 	}
@@ -149,6 +152,9 @@ func (ctx *InsertCtx) FlushBufs() error {
 		}
 		matchIdxsPool.Put(matchIdxs)
 	}
+
+	// _ = vmsketch.AddRows(ctx.mrs) // TODO: or move this before crx.addRows?
+
 	// There is no need in limiting the number of concurrent calls to vmstorage.AddRows() here,
 	// since the number of concurrent FlushBufs() calls should be already limited via writeconcurrencylimiter
 	// used at every stream.Parse() call under lib/protoparser/*

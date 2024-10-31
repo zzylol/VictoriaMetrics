@@ -8,7 +8,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 func TestInmemoryPartMustInitFromRows(t *testing.T) {

@@ -9,8 +9,8 @@ import (
 	"path"
 	"strconv"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
 )
 
 // dedicatedServer struct from API.

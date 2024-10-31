@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/encoding"
+	"github.com/zzylol/VictoriaMetrics/lib/encoding"
 )
 
 func TestMarshaledBlockHeaderSize(t *testing.T) {

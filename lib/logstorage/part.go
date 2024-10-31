@@ -6,9 +6,9 @@ import (
 
 	"github.com/cespare/xxhash/v2"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/filestream"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fs"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/filestream"
+	"github.com/zzylol/VictoriaMetrics/lib/fs"
 )
 
 type part struct {

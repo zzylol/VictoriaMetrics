@@ -4,7 +4,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 // LogRows holds a set of rows needed for Storage.MustAddRows

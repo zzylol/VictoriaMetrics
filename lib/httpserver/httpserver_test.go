@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/flagutil"
+	"github.com/zzylol/VictoriaMetrics/lib/flagutil"
 )
 
 func TestGetQuotedRemoteAddr(t *testing.T) {

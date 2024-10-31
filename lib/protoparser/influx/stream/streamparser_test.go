@@ -7,8 +7,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/influx"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/influx"
 )
 
 func TestDetectTimestamp(t *testing.T) {

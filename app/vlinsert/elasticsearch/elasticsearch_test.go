@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vlinsert/insertutils"
+	"github.com/zzylol/VictoriaMetrics/app/vlinsert/insertutils"
 )
 
 func TestReadBulkRequest_Failure(t *testing.T) {

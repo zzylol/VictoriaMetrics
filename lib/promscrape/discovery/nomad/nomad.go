@@ -3,9 +3,9 @@ package nomad
 import (
 	"fmt"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/proxy"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/lib/proxy"
 )
 
 // SDConfig represents service discovery config for Nomad.

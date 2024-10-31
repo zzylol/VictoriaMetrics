@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
 )
 
 // WriteMetricRelabelDebug writes /metric-relabel-debug page to w with the corresponding args.

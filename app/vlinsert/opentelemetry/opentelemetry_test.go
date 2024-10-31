@@ -3,8 +3,8 @@ package opentelemetry
 import (
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vlinsert/insertutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/opentelemetry/pb"
+	"github.com/zzylol/VictoriaMetrics/app/vlinsert/insertutils"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/opentelemetry/pb"
 )
 
 func TestPushProtoOk(t *testing.T) {

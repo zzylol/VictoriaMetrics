@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompb"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
+	"github.com/zzylol/VictoriaMetrics/lib/prompb"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
 )
 
 func TestWriteRequestMarshalProtobuf(t *testing.T) {

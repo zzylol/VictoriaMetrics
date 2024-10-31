@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmselect/graphiteql"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logstorage"
+	"github.com/zzylol/VictoriaMetrics/app/vmselect/graphiteql"
+	"github.com/zzylol/VictoriaMetrics/lib/logstorage"
 	"github.com/zzylol/metricsql"
 )
 

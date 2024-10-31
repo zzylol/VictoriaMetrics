@@ -5,7 +5,7 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmselect/netstorage"
+	"github.com/zzylol/VictoriaMetrics/app/vmselect/netstorage"
 	"github.com/zzylol/metricsql"
 )
 

@@ -3,7 +3,7 @@ package storage
 import (
 	"fmt"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/encoding"
+	"github.com/zzylol/VictoriaMetrics/lib/encoding"
 )
 
 // TSID is unique id for a time series.

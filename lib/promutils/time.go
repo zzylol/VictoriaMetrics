@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/timeutil"
+	"github.com/zzylol/VictoriaMetrics/lib/timeutil"
 )
 
 // ParseTimeMsec parses time s in different formats.

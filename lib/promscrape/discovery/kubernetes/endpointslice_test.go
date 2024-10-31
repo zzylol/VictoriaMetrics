@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promutils"
+	"github.com/zzylol/VictoriaMetrics/lib/promutils"
 )
 
 func TestParseEndpointSliceListFail(t *testing.T) {

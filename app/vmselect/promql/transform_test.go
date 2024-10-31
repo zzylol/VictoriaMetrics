@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/prometheus"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/storage"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/prometheus"
+	"github.com/zzylol/VictoriaMetrics/lib/storage"
 )
 
 func TestFixBrokenBuckets(t *testing.T) {

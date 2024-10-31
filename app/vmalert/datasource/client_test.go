@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/utils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/utils"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
 )
 
 var (

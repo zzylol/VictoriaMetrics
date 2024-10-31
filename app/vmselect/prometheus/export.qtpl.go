@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/querytracer"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/storage"
+	"github.com/zzylol/VictoriaMetrics/lib/querytracer"
+	"github.com/zzylol/VictoriaMetrics/lib/storage"
 	"github.com/valyala/quicktemplate"
 )
 

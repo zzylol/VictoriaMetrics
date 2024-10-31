@@ -11,11 +11,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/encoding"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompb"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/slicesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/encoding"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/prompb"
+	"github.com/zzylol/VictoriaMetrics/lib/slicesutil"
 )
 
 const (
@@ -141,6 +141,28 @@ type MetricName struct {
 	// Tags are optional. They must be sorted by tag Key for canonical view.
 	// Use sortTags method.
 	Tags []Tag
+}
+
+// Equal returns true if tag equals t
+func (mn *MetricName) Equal(other *MetricName) bool {
+	if len(mn.MetricGroup) != len(other.MetricGroup) || len(mn.Tags) != len(other.Tags) {
+		return false
+	}
+
+	if !bytes.Equal(mn.MetricGroup, other.MetricGroup) {
+		return false
+	}
+
+	if len(mn.Tags) == 0 {
+		return true
+	}
+
+	for i := range mn.Tags {
+		if string(mn.Tags[i].Key) != string(other.Tags[i].Key) || string(mn.Tags[i].Value) != string(other.Tags[i].Value) {
+			return false
+		}
+	}
+	return true
 }
 
 // GetMetricName returns a MetricName from pool.
@@ -398,7 +420,7 @@ func hasTag(tags []string, key []byte) bool {
 func (mn *MetricName) String() string {
 	var mnCopy MetricName
 	mnCopy.CopyFrom(mn)
-	mnCopy.sortTags()
+	mnCopy.SortTags()
 	var tags []string
 	for i := range mnCopy.Tags {
 		t := &mnCopy.Tags[i]
@@ -628,7 +650,7 @@ func (mn *MetricName) marshalRaw(dst []byte) []byte {
 	dst = marshalBytesFast(dst, nil)
 	dst = marshalBytesFast(dst, mn.MetricGroup)
 
-	mn.sortTags()
+	mn.SortTags()
 	for i := range mn.Tags {
 		tag := &mn.Tags[i]
 		dst = marshalBytesFast(dst, tag.Key)
@@ -699,7 +721,7 @@ func unmarshalBytesFast(src []byte) ([]byte, []byte, error) {
 //
 // Tags sorting is quite slow, so try avoiding it by caching mn
 // with sorted tags.
-func (mn *MetricName) sortTags() {
+func (mn *MetricName) SortTags() {
 	if len(mn.Tags) == 0 {
 		return
 	}

@@ -3,7 +3,7 @@ package streamaggr
 import (
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 // sumSamplesAggrState calculates output=sum_samples, e.g. the sum over input samples.

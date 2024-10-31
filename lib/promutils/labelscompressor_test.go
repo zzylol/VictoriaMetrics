@@ -5,7 +5,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
 )
 
 func TestLabelsCompressorSerial(t *testing.T) {

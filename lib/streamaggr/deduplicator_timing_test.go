@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
 )
 
 func BenchmarkDeduplicatorPush(b *testing.B) {

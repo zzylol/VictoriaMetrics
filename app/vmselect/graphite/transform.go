@@ -13,8 +13,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmselect/graphiteql"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/cgroup"
+	"github.com/zzylol/VictoriaMetrics/app/vmselect/graphiteql"
+	"github.com/zzylol/VictoriaMetrics/lib/cgroup"
 )
 
 // nextSeriesFunc must return the next series to process.

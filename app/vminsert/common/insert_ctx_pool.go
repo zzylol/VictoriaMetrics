@@ -3,7 +3,7 @@ package common
 import (
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/cgroup"
+	"github.com/zzylol/VictoriaMetrics/lib/cgroup"
 )
 
 // GetInsertCtx returns InsertCtx from the pool.

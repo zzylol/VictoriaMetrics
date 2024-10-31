@@ -3,7 +3,7 @@ package logstorage
 import (
 	"fmt"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // filterIPv4Range matches the given ipv4 range [minValue..maxValue].

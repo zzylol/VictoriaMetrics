@@ -6,10 +6,10 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
 	"github.com/VictoriaMetrics/metrics"
 	"github.com/valyala/fastjson/fastfloat"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 var (
@@ -216,7 +216,7 @@ func (t *Tag) unmarshal(s string) {
 	n := strings.IndexByte(s, '=')
 	if n < 0 {
 		// Empty tag value.
-		// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/1100
+		// See https://github.com/zzylol/VictoriaMetrics/issues/1100
 		t.Key = s
 		t.Value = s[len(s):]
 	} else {

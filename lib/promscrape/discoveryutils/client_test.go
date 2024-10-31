@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/proxy"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/proxy"
 )
 
 func newTestServer(handler func(w http.ResponseWriter, r *http.Request)) (*httptest.Server, error) {

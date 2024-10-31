@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // pipeFields implements '| fields ...' pipe.

@@ -9,15 +9,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmselect/netstorage"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmselect/searchutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmstorage"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bufferedwriter"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/httputils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompb"
-	graphiteparser "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/graphite"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/storage"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/app/vmselect/netstorage"
+	"github.com/zzylol/VictoriaMetrics/app/vmselect/searchutils"
+	"github.com/zzylol/VictoriaMetrics/app/vmstorage"
+	"github.com/zzylol/VictoriaMetrics/lib/bufferedwriter"
+	"github.com/zzylol/VictoriaMetrics/lib/httputils"
+	"github.com/zzylol/VictoriaMetrics/lib/prompb"
+	graphiteparser "github.com/zzylol/VictoriaMetrics/lib/protoparser/graphite"
+	"github.com/zzylol/VictoriaMetrics/lib/storage"
 )
 
 var (

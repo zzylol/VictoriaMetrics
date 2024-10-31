@@ -3,8 +3,8 @@ package streamaggr
 import (
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
 	"github.com/cespare/xxhash/v2"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 // countSeriesAggrState calculates output=count_series, e.g. the number of unique series.

@@ -6,9 +6,9 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/datasource"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/notifier"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/datasource"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/notifier"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
 )
 
 // CompareRules is a test helper func for other tests

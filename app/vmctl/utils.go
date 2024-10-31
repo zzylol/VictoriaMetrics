@@ -6,8 +6,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/terminal"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/vm"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/terminal"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/vm"
 )
 
 const barTpl = `{{ blue "%s:" }} {{ counters . }} {{ bar . "[" "█" (cycle . "█") "▒" "]" }} {{ percent . }}`

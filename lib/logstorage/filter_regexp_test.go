@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/regexutil"
+	"github.com/zzylol/VictoriaMetrics/lib/regexutil"
 )
 
 func TestFilterRegexp(t *testing.T) {

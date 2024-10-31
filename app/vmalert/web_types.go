@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/notifier"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/rule"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/notifier"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/rule"
 )
 
 const (

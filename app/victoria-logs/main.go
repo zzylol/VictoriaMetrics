@@ -7,17 +7,17 @@ import (
 	"os"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vlinsert"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vlselect"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vlstorage"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/buildinfo"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/envflag"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/flagutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fs"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/httpserver"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/procutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/pushmetrics"
+	"github.com/zzylol/VictoriaMetrics/app/vlinsert"
+	"github.com/zzylol/VictoriaMetrics/app/vlselect"
+	"github.com/zzylol/VictoriaMetrics/app/vlstorage"
+	"github.com/zzylol/VictoriaMetrics/lib/buildinfo"
+	"github.com/zzylol/VictoriaMetrics/lib/envflag"
+	"github.com/zzylol/VictoriaMetrics/lib/flagutil"
+	"github.com/zzylol/VictoriaMetrics/lib/fs"
+	"github.com/zzylol/VictoriaMetrics/lib/httpserver"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/procutil"
+	"github.com/zzylol/VictoriaMetrics/lib/pushmetrics"
 )
 
 var (

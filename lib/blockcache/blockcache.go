@@ -8,10 +8,10 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/cgroup"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fasttime"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/timeutil"
 	"github.com/cespare/xxhash/v2"
+	"github.com/zzylol/VictoriaMetrics/lib/cgroup"
+	"github.com/zzylol/VictoriaMetrics/lib/fasttime"
+	"github.com/zzylol/VictoriaMetrics/lib/timeutil"
 )
 
 var missesBeforeCaching = flag.Int("blockcache.missesBeforeCaching", 2, "The number of cache misses before putting the block into cache. "+

@@ -3,7 +3,7 @@
 package memory
 
 import (
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // This code has been adopted from https://github.com/pbnjay/memory

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 // pipeUnpackJSON processes '| unpack_json ...' pipe.

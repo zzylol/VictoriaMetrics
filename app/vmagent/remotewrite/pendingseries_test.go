@@ -5,7 +5,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
 )
 
 func TestPushWriteRequest(t *testing.T) {

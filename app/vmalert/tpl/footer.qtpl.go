@@ -8,7 +8,7 @@ package tpl
 import (
 	"net/http"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/utils"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/utils"
 )
 
 //line app/vmalert/tpl/footer.qtpl:8

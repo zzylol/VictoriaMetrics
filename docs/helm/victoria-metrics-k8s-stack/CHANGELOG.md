@@ -19,7 +19,7 @@
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
 - Add an explicit fail in case both Grafana dashboard via sidecar and `grafana.dashboards` are enabled. Previously, this configuration would be accepted and sidecar configuration would silently override `.grafana.dashboards` configuration. See [these docs](https://docs.victoriametrics.com/helm/victoriametrics-k8s-stack/#adding-external-dashboards) for information about adding external dashboards.
-- bump version of VM components to [v1.105.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.105.0)
+- bump version of VM components to [v1.105.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.105.0)
 
 ## 0.27.5
 
@@ -86,7 +86,7 @@
 ![AppVersion: v1.104.0](https://img.shields.io/static/v1?label=AppVersion&message=v1.104.0&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.104.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.104.0)
+- bump version of VM components to [v1.104.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.104.0)
 
 ## 0.26.0
 
@@ -243,7 +243,7 @@
 
 **Update note**: Update `grafana.spec` to `grafana.vmScrape.spec`
 
-- bump version of VM components to [v1.103.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.103.0)
+- bump version of VM components to [v1.103.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.103.0)
 - Added `dashboards.<dashboardName>` bool flag to enable dashboard even if component it is for is not installed.
 - Allow extra `vmalert.notifiers` without dropping default notifier if `alertmanager.enabled: true`
 - Do not drop default notifier, when vmalert.additionalNotifierConfigs is set
@@ -333,7 +333,7 @@
 ![AppVersion: v1.102.1](https://img.shields.io/static/v1?label=AppVersion&message=v1.102.1&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.102.1](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.102.1)
+- bump version of VM components to [v1.102.1](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.102.1)
 
 ## 0.24.4
 
@@ -352,7 +352,7 @@
 ![AppVersion: v1.102.0](https://img.shields.io/static/v1?label=AppVersion&message=v1.102.0&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.102.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.102.0)
+- bump version of VM components to [v1.102.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.102.0)
 
 ## 0.24.2
 
@@ -484,7 +484,7 @@
 ![AppVersion: v1.101.0](https://img.shields.io/static/v1?label=AppVersion&message=v1.101.0&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.101.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.101.0)
+- bump version of VM components to [v1.101.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.101.0)
 
 ## 0.21.2
 
@@ -522,7 +522,7 @@
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
 - upgraded dashboards and alerting rules, added values file for local (Minikube) setup
-- bump version of VM components to [v1.100.1](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.100.1)
+- bump version of VM components to [v1.100.1](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.100.1)
 
 ## 0.20.0
 
@@ -540,7 +540,7 @@
 ![AppVersion: v1.99.0](https://img.shields.io/static/v1?label=AppVersion&message=v1.99.0&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.99.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.99.0)
+- bump version of VM components to [v1.99.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.99.0)
 
 ## 0.19.3
 
@@ -590,7 +590,7 @@
 ![AppVersion: v1.97.1](https://img.shields.io/static/v1?label=AppVersion&message=v1.97.1&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.97.1](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.97.1)
+- bump version of VM components to [v1.97.1](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.97.1)
 - Fix helm lint when ingress resources enabled - split templates of resources per kind. See [#820](https://github.com/VictoriaMetrics/helm-charts/pull/820) by @MemberIT.
 
 ## 0.18.11
@@ -609,7 +609,7 @@
 ![AppVersion: v1.96.0](https://img.shields.io/static/v1?label=AppVersion&message=v1.96.0&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.96.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.96.0)
+- bump version of VM components to [v1.96.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.96.0)
 - Add optional allowCrossNamespaceImport to GrafanaDashboard(s) (#788)
 
 ## 0.18.9
@@ -629,7 +629,7 @@
 ![AppVersion: v1.95.1](https://img.shields.io/static/v1?label=AppVersion&message=v1.95.1&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.95.1](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.95.1)
+- bump version of VM components to [v1.95.1](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.95.1)
 
 ## 0.18.7
 
@@ -638,7 +638,7 @@
 ![AppVersion: v1.95.0](https://img.shields.io/static/v1?label=AppVersion&message=v1.95.0&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.95.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.95.0)
+- bump version of VM components to [v1.95.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.95.0)
 - Support adding extra group parameters for default vmrules. (#752)
 
 ## 0.18.6
@@ -676,7 +676,7 @@
 ![AppVersion: v1.94.0](https://img.shields.io/static/v1?label=AppVersion&message=v1.94.0&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- bump version of VM components to [v1.94.0](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.94.0)
+- bump version of VM components to [v1.94.0](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.94.0)
 
 ## 0.18.2
 
@@ -694,7 +694,7 @@
 ![AppVersion: v1.93.5](https://img.shields.io/static/v1?label=AppVersion&message=v1.93.5&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- Bump version of VM components to [v1.93.5](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.93.5)
+- Bump version of VM components to [v1.93.5](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.93.5)
 
 ## 0.18.0
 
@@ -718,7 +718,7 @@
 ![AppVersion: v1.93.4](https://img.shields.io/static/v1?label=AppVersion&message=v1.93.4&color=success&logo=)
 ![Helm: v3](https://img.shields.io/static/v1?label=Helm&message=v3&color=informational&logo=helm)
 
-- Bump version of VM components to [v1.93.4](https://github.com/VictoriaMetrics/VictoriaMetrics/releases/tag/v1.93.4)
+- Bump version of VM components to [v1.93.4](https://github.com/zzylol/VictoriaMetrics/releases/tag/v1.93.4)
 - Bump version of operator chart to [0.27.0](https://github.com/VictoriaMetrics/helm-charts/releases/tag/victoria-metrics-operator-0.27.0)
 
 ## 0.17.7

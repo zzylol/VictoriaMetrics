@@ -10,7 +10,7 @@ import (
 	"net/url"
 	"path"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert/utils"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert/utils"
 )
 
 //line app/vmalert/tpl/header.qtpl:9

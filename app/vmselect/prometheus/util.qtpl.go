@@ -6,8 +6,8 @@ package prometheus
 
 //line app/vmselect/prometheus/util.qtpl:1
 import (
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/querytracer"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/storage"
+	"github.com/zzylol/VictoriaMetrics/lib/querytracer"
+	"github.com/zzylol/VictoriaMetrics/lib/storage"
 )
 
 //line app/vmselect/prometheus/util.qtpl:8

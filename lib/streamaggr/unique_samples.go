@@ -3,7 +3,7 @@ package streamaggr
 import (
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 // uniqueSamplesAggrState calculates output=unique_samples, e.g. the number of unique sample values.

@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmselect/netstorage"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/storage"
+	"github.com/zzylol/VictoriaMetrics/app/vmselect/netstorage"
+	"github.com/zzylol/VictoriaMetrics/lib/storage"
 )
 
 func BenchmarkFederate(b *testing.B) {

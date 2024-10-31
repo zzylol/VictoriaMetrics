@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vlinsert/insertutils"
+	"github.com/zzylol/VictoriaMetrics/app/vlinsert/insertutils"
 )
 
 func TestSyslogLineReader_Success(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 func TestParseAuthConfigFailure(t *testing.T) {

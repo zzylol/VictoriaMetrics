@@ -4,7 +4,7 @@ import (
 	"math/bits"
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 // pools contains pools for byte slices of various capacities.

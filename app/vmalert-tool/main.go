@@ -8,8 +8,8 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmalert-tool/unittest"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/buildinfo"
+	"github.com/zzylol/VictoriaMetrics/app/vmalert-tool/unittest"
+	"github.com/zzylol/VictoriaMetrics/lib/buildinfo"
 )
 
 func main() {

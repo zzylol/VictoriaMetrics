@@ -5,15 +5,15 @@ import (
 
 	"github.com/VictoriaMetrics/metrics"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmagent/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmagent/remotewrite"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/auth"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
-	parserCommon "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/newrelic"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/newrelic/stream"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/tenantmetrics"
+	"github.com/zzylol/VictoriaMetrics/app/vmagent/common"
+	"github.com/zzylol/VictoriaMetrics/app/vmagent/remotewrite"
+	"github.com/zzylol/VictoriaMetrics/lib/auth"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
+	parserCommon "github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/newrelic"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/newrelic/stream"
+	"github.com/zzylol/VictoriaMetrics/lib/tenantmetrics"
 )
 
 var (

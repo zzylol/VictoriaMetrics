@@ -3,7 +3,7 @@ package utils
 import (
 	"strings"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
 )
 
 // AuthConfigOptions options which helps build promauth.Config

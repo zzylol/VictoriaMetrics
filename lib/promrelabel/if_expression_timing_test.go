@@ -2,10 +2,11 @@ package promrelabel
 
 import (
 	"fmt"
-	"gopkg.in/yaml.v2"
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
+	"gopkg.in/yaml.v2"
+
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
 )
 
 func BenchmarkIfExpression(b *testing.B) {

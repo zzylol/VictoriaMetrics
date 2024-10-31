@@ -6,9 +6,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/opentsdb"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/vm"
 	"github.com/cheggaaa/pb/v3"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/opentsdb"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/vm"
 )
 
 type otsdbProcessor struct {

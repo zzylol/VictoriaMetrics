@@ -5,13 +5,13 @@ import (
 	"io"
 	"strings"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/encoding"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fasttime"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/querytracer"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/slicesutil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/stringsutil"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/encoding"
+	"github.com/zzylol/VictoriaMetrics/lib/fasttime"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/querytracer"
+	"github.com/zzylol/VictoriaMetrics/lib/slicesutil"
+	"github.com/zzylol/VictoriaMetrics/lib/stringsutil"
 )
 
 // BlockRef references a Block.
@@ -258,7 +258,7 @@ func (sq *SearchQuery) GetTimeRange() TimeRange {
 // NewSearchQuery creates new search query for the given args.
 func NewSearchQuery(start, end int64, tagFilterss [][]TagFilter, maxMetrics int) *SearchQuery {
 	if start < 0 {
-		// This is needed for https://github.com/VictoriaMetrics/VictoriaMetrics/issues/5553
+		// This is needed for https://github.com/zzylol/VictoriaMetrics/issues/5553
 		start = 0
 	}
 	if maxMetrics <= 0 {

@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/promauth"
+	"github.com/zzylol/VictoriaMetrics/lib/promauth"
 )
 
 // authResponse represents identity api response

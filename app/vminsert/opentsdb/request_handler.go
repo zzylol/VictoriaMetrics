@@ -3,11 +3,11 @@ package opentsdb
 import (
 	"io"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/relabel"
-	parser "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/opentsdb"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/opentsdb/stream"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/common"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/relabel"
+	parser "github.com/zzylol/VictoriaMetrics/lib/protoparser/opentsdb"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/opentsdb/stream"
 )
 
 var (

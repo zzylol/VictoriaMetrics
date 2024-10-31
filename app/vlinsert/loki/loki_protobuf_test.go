@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vlinsert/insertutils"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logstorage"
 	"github.com/golang/snappy"
+	"github.com/zzylol/VictoriaMetrics/app/vlinsert/insertutils"
+	"github.com/zzylol/VictoriaMetrics/lib/logstorage"
 )
 
 type testLogMessageProcessor struct {

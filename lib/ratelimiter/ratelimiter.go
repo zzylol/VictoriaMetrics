@@ -4,8 +4,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/timerpool"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/lib/timerpool"
 )
 
 // RateLimiter limits per-second rate of arbitrary resources.

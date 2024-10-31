@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/auth"
+	"github.com/zzylol/VictoriaMetrics/lib/auth"
 )
 
 func TestCreateMetricNameError(t *testing.T) {

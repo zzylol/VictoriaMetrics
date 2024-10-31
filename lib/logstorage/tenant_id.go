@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/encoding"
+	"github.com/zzylol/VictoriaMetrics/lib/encoding"
 )
 
 // TenantID is an id of a tenant for log streams.

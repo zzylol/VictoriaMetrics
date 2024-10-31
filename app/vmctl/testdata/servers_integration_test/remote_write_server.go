@@ -15,11 +15,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmctl/vm"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmselect/prometheus"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/native/stream"
-	parser "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/vmimport"
+	"github.com/zzylol/VictoriaMetrics/app/vmctl/vm"
+	"github.com/zzylol/VictoriaMetrics/app/vmselect/prometheus"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/native/stream"
+	parser "github.com/zzylol/VictoriaMetrics/lib/protoparser/vmimport"
 )
 
 // LabelValues represents series from api/v1/series response

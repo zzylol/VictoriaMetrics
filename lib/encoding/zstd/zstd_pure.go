@@ -6,8 +6,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
 	"github.com/klauspost/compress/zstd"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 var (

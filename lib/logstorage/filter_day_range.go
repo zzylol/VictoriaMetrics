@@ -1,7 +1,7 @@
 package logstorage
 
 import (
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // filterDayRange filters by day range.

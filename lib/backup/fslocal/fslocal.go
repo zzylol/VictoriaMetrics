@@ -7,10 +7,10 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/fscommon"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/filestream"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/common"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/fscommon"
+	"github.com/zzylol/VictoriaMetrics/lib/filestream"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
 )
 
 // FS represents local filesystem.

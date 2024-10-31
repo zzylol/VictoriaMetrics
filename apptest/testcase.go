@@ -3,7 +3,7 @@ package apptest
 import (
 	"testing"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fs"
+	"github.com/zzylol/VictoriaMetrics/lib/fs"
 )
 
 // TestCase holds the state and defines clean-up procedure common for all test

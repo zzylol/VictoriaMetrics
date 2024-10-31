@@ -14,18 +14,18 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/cgroup"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/fs"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/memory"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/syncwg"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/timeutil"
+	"github.com/zzylol/VictoriaMetrics/lib/cgroup"
+	"github.com/zzylol/VictoriaMetrics/lib/fs"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/memory"
+	"github.com/zzylol/VictoriaMetrics/lib/syncwg"
+	"github.com/zzylol/VictoriaMetrics/lib/timeutil"
 )
 
 // maxInmemoryParts is the maximum number of inmemory parts in the table.
 //
 // This limit allows reducing CPU usage under high ingestion rate.
-// See https://github.com/VictoriaMetrics/VictoriaMetrics/pull/5212
+// See https://github.com/zzylol/VictoriaMetrics/pull/5212
 //
 // This number may be reached when the insertion pace outreaches merger pace.
 // If this number is reached, then the data ingestion is paused until background
@@ -127,7 +127,7 @@ type Table struct {
 	fileParts []*partWrapper
 
 	// inmemoryPartsLimitCh limits the number of inmemory parts to maxInmemoryParts
-	// in order to prevent from data ingestion slowdown as described at https://github.com/VictoriaMetrics/VictoriaMetrics/pull/5212
+	// in order to prevent from data ingestion slowdown as described at https://github.com/zzylol/VictoriaMetrics/pull/5212
 	inmemoryPartsLimitCh chan struct{}
 
 	// stopCh is used for notifying all the background workers to stop.
@@ -904,7 +904,7 @@ func (tb *Table) flushBlocksToInmemoryParts(ibs []*inmemoryBlock, isFinal bool) 
 func (tb *Table) addToInmemoryParts(pw *partWrapper, isFinal bool) {
 	// Wait until the number of in-memory parts goes below maxInmemoryParts.
 	// This prevents from excess CPU usage during search in tb under high ingestion rate to tb.
-	// See https://github.com/VictoriaMetrics/VictoriaMetrics/pull/5212
+	// See https://github.com/zzylol/VictoriaMetrics/pull/5212
 	select {
 	case tb.inmemoryPartsLimitCh <- struct{}{}:
 	default:
@@ -1542,7 +1542,7 @@ func mustOpenParts(path string) []*partWrapper {
 	if !fs.IsPathExist(partsFile) {
 		// Create parts.json file if it doesn't exist yet.
 		// This should protect from possible carshloops just after the migration from versions below v1.90.0
-		// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/4336
+		// See https://github.com/zzylol/VictoriaMetrics/issues/4336
 		mustWritePartNames(pws, path)
 	}
 

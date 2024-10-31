@@ -1,7 +1,7 @@
 package fsnil
 
 import (
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/common"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/common"
 )
 
 // FS represents nil remote filesystem.

@@ -8,13 +8,13 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/backupnames"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/fslocal"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/backup/fsnil"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/snapshot/snapshotutil"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/backupnames"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/common"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/fslocal"
+	"github.com/zzylol/VictoriaMetrics/lib/backup/fsnil"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/snapshot/snapshotutil"
 )
 
 // Backup performs backup according to the provided settings.

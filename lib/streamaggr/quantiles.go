@@ -4,8 +4,8 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"
 	"github.com/valyala/histogram"
+	"github.com/zzylol/VictoriaMetrics/lib/bytesutil"
 )
 
 // quantilesAggrState calculates output=quantiles, e.g. the given quantiles over the input samples.

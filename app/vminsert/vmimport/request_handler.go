@@ -4,15 +4,15 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/common"
-	"github.com/VictoriaMetrics/VictoriaMetrics/app/vminsert/relabel"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/prompbmarshal"
-	parserCommon "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/common"
-	parser "github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/vmimport"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/protoparser/vmimport/stream"
-	"github.com/VictoriaMetrics/VictoriaMetrics/lib/storage"
 	"github.com/VictoriaMetrics/metrics"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/common"
+	"github.com/zzylol/VictoriaMetrics/app/vminsert/relabel"
+	"github.com/zzylol/VictoriaMetrics/lib/logger"
+	"github.com/zzylol/VictoriaMetrics/lib/prompbmarshal"
+	parserCommon "github.com/zzylol/VictoriaMetrics/lib/protoparser/common"
+	parser "github.com/zzylol/VictoriaMetrics/lib/protoparser/vmimport"
+	"github.com/zzylol/VictoriaMetrics/lib/protoparser/vmimport/stream"
+	"github.com/zzylol/VictoriaMetrics/lib/storage"
 )
 
 var (
@@ -22,7 +22,7 @@ var (
 
 // InsertHandler processes `/api/v1/import` request.
 //
-// See https://github.com/VictoriaMetrics/VictoriaMetrics/issues/6
+// See https://github.com/zzylol/VictoriaMetrics/issues/6
 func InsertHandler(req *http.Request) error {
 	extraLabels, err := parserCommon.GetExtraLabels(req)
 	if err != nil {
