@@ -40,6 +40,7 @@ go test -v -timeout 0 -run ^TestCostAnalysisQuantile$ github.com/froot/promsketc
 ```
 git clone git@github.com:zzylol/prometheus-sketches.git
 cd prometheus-sketches
+go get github.com/froot-netsys/promsketch
 go mod tidy
 ```
 Compile:
@@ -52,6 +53,8 @@ make build
 ```
 git clone git@github.com:zzylol/VictoriaMetrics.git
 cd VictoriaMetrics
+go get github.com/froot-netsys/promsketch
+go mod tidy
 go mod vendor
 ```
 Compile:
