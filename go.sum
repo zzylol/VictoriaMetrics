@@ -224,8 +224,6 @@ github.com/fatih/color v1.17.0 h1:GlRw1BRJxkpqUCBKzKOw098ed57fEsKeNjpTe3cSjK4=
 github.com/fatih/color v1.17.0/go.mod h1:YZ7TlrGPkiz6ku9fK3TLD/pl3CpsiFyu8N92HLgmosI=
 github.com/felixge/httpsnoop v1.0.4 h1:NFTV2Zj1bL4mc9sqWACXbQFVBBg2W3GPvqp8/ESS2Wg=
 github.com/felixge/httpsnoop v1.0.4/go.mod h1:m8KPJKqk1gH5J9DgRY2ASl2lWCfGKXixSwevea8zH2U=
-github.com/froot-netsys/promsketch v0.0.0-20241031182349-02d6544c154d h1:VopoDnXg4hjipfLk8N7WU+RTior7RvLJav1cNlQNTXE=
-github.com/froot-netsys/promsketch v0.0.0-20241031182349-02d6544c154d/go.mod h1:s/Gi4OuWgR5qr9ge24HYzQ/SjWfpnRVYUUj+RKNiCu0=
 github.com/froot-netsys/promsketch v0.0.0-20241031183155-75e02bf3ae5c h1:qJ9rzUy5xUyo938vVhDGZjjqLHYjCAt6dSbtu0cdQSs=
 github.com/froot-netsys/promsketch v0.0.0-20241031183155-75e02bf3ae5c/go.mod h1:h81HY/MPZ4wTzH+iRNsWHqCEoURdnXJIHhYXjcV+QNw=
 github.com/fsnotify/fsnotify v1.7.0 h1:8JEhPFa5W2WU7YfeZzPNqzMP6Lwt7L2715Ggo0nosvA=
@@ -585,10 +583,6 @@ github.com/zzylol/go-kll v0.0.0-20240604180517-e15a688e6ebe h1:559sShIAZzwmW38T8
 github.com/zzylol/go-kll v0.0.0-20240604180517-e15a688e6ebe/go.mod h1:yBYzN7orOcqHVW7NcjYS/K90f4bOuXr4OkhsadygrnM=
 github.com/zzylol/metricsql v0.1.1 h1:Wk/7O7gdjF7b1LTCT81Rd6Gcx/e3lTSB7n1zttR8V1o=
 github.com/zzylol/metricsql v0.1.1/go.mod h1:lQFUrqsayuRxjK812eEyf6sNyrfRImTmBHtPrAWySu8=
-github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches v0.0.0-20241028182337-4e9ac2e3497b h1:zKDzQ/6U5Io1TwCpLEM/Z1n2odUSDbsgmL93kkoCUxY=
-github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches v0.0.0-20241028182337-4e9ac2e3497b/go.mod h1:utYEKECZdCndMSH/CG0R3Cpb5ukkZFsPibIhWi29bxE=
-github.com/zzylol/prometheus-sketch-VLDB/uniform-sampling-caching/prometheus v0.0.0-20241028182337-4e9ac2e3497b h1:ptZk+EjHwpaQf+NxXoO0opDkB/HMeGYJwJETf8dHMqs=
-github.com/zzylol/prometheus-sketch-VLDB/uniform-sampling-caching/prometheus v0.0.0-20241028182337-4e9ac2e3497b/go.mod h1:QiIlqAeVdnAETgD3FJsYsQzcDZu3tKSfs6TW5SyzAcw=
 github.com/zzylol/prometheus-sketches v0.0.0-20240930201432-bcde765c4f02 h1:NgPzXSFzw2uikDqAgMiAArVMPvhBPO6ZGqUqXzqZnLo=
 github.com/zzylol/prometheus-sketches v0.0.0-20240930201432-bcde765c4f02/go.mod h1:YuGgKUrT5v0eW4QOcPeZIBG38LSC8NqTMKwZRLnoSUc=
 go.opencensus.io v0.21.0/go.mod h1:mSImk1erAIZhrmZN+AvHh14ztQfjbGwt4TtuofqLduU=
@@ -630,7 +624,6 @@ golang.org/x/crypto v0.0.0-20190510104115-cbcb75029529/go.mod h1:yigFU9vqHzYiE8U
 golang.org/x/crypto v0.0.0-20190605123033-f99c8df09eb5/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
 golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=
-golang.org/x/crypto v0.0.0-20220829220503-c86fa9a7ed90/go.mod h1:IxCIyHEi3zRg3s0A5j5BB6A9Jmi73HwBIUl50j+osU4=
 golang.org/x/crypto v0.28.0 h1:GBDwsMXVQi34v5CCYUm2jkJvu4cbtru2U4TN2PSyQnw=
 golang.org/x/crypto v0.28.0/go.mod h1:rmgy+3RHxRZMyY0jjAJShp2zgEdOqj2AO7U0pYmeQ7U=
 golang.org/x/exp v0.0.0-20190121172915-509febef88a4/go.mod h1:CJ0aWSM057203Lf6IL+f9T1iT9GByDxfZKAQTCR3kQA=
@@ -698,7 +691,6 @@ golang.org/x/net v0.0.0-20200822124328-c89045814202/go.mod h1:/O7V0waA8r7cgGh81R
 golang.org/x/net v0.0.0-20201021035429-f5854403a974/go.mod h1:sp8m0HH+o8qH0wwXwYZr8TS3Oi6o0r6Gce1SSxlDquU=
 golang.org/x/net v0.0.0-20201110031124-69a78807bb2b/go.mod h1:sp8m0HH+o8qH0wwXwYZr8TS3Oi6o0r6Gce1SSxlDquU=
 golang.org/x/net v0.0.0-20210525063256-abc453219eb5/go.mod h1:9nx3DQGgdP8bBQD5qxJ1jj9UTztislL4KSBs9R2vV5Y=
-golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2/go.mod h1:9nx3DQGgdP8bBQD5qxJ1jj9UTztislL4KSBs9R2vV5Y=
 golang.org/x/net v0.30.0 h1:AcW1SDZMkb8IpzCdQUaIq2sP4sZ4zw+55h6ynffypl4=
 golang.org/x/net v0.30.0/go.mod h1:2wGyMJ5iFasEhkwi13ChkO/t1ECNC4X4eBKkVFyYFlU=
 golang.org/x/oauth2 v0.0.0-20180821212333-d2e6202438be/go.mod h1:N/0e6XlmueqKjAGxoOufVs8QHGRruUQn6yWY3a++T0U=
@@ -757,7 +749,6 @@ golang.org/x/sys v0.0.0-20201119102817-f84b799fce68/go.mod h1:h1NjWce9XRLGQEsW7w
 golang.org/x/sys v0.0.0-20210124154548-22da62e12c0c/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20210423082822-04245dca01da/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
 golang.org/x/sys v0.0.0-20210603081109-ebe580a85c40/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
-golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.1.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.6.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
