@@ -438,7 +438,7 @@ github.com/fatih/color
 # github.com/felixge/httpsnoop v1.0.4
 ## explicit; go 1.13
 github.com/felixge/httpsnoop
-# github.com/froot-netsys/promsketch v0.0.0-20241031182349-02d6544c154d
+# github.com/froot-netsys/promsketch v0.0.0-20241031183155-75e02bf3ae5c
 ## explicit; go 1.22.5
 github.com/froot-netsys/promsketch
 # github.com/go-kit/log v0.2.1
@@ -724,13 +724,14 @@ github.com/zzylol/metricsql
 github.com/zzylol/metricsql/binaryop
 # github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches v0.0.0-20241028182337-4e9ac2e3497b
 ## explicit; go 1.22.5
-github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches/model/labels
-github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches/promql/parser/posrange
-github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches/util/annotations
-github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches/util/zeropool
 # github.com/zzylol/prometheus-sketch-VLDB/uniform-sampling-caching/prometheus v0.0.0-20241028182337-4e9ac2e3497b
 ## explicit; go 1.22.3
-github.com/zzylol/prometheus-sketch-VLDB/uniform-sampling-caching/prometheus/model/labels
+# github.com/zzylol/prometheus-sketches v0.0.0-20240930201432-bcde765c4f02
+## explicit; go 1.22.5
+github.com/zzylol/prometheus-sketches/model/labels
+github.com/zzylol/prometheus-sketches/promql/parser/posrange
+github.com/zzylol/prometheus-sketches/util/annotations
+github.com/zzylol/prometheus-sketches/util/zeropool
 # go.opencensus.io v0.24.0
 ## explicit; go 1.13
 go.opencensus.io

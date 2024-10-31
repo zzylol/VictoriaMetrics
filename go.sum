@@ -226,6 +226,8 @@ github.com/felixge/httpsnoop v1.0.4 h1:NFTV2Zj1bL4mc9sqWACXbQFVBBg2W3GPvqp8/ESS2
 github.com/felixge/httpsnoop v1.0.4/go.mod h1:m8KPJKqk1gH5J9DgRY2ASl2lWCfGKXixSwevea8zH2U=
 github.com/froot-netsys/promsketch v0.0.0-20241031182349-02d6544c154d h1:VopoDnXg4hjipfLk8N7WU+RTior7RvLJav1cNlQNTXE=
 github.com/froot-netsys/promsketch v0.0.0-20241031182349-02d6544c154d/go.mod h1:s/Gi4OuWgR5qr9ge24HYzQ/SjWfpnRVYUUj+RKNiCu0=
+github.com/froot-netsys/promsketch v0.0.0-20241031183155-75e02bf3ae5c h1:qJ9rzUy5xUyo938vVhDGZjjqLHYjCAt6dSbtu0cdQSs=
+github.com/froot-netsys/promsketch v0.0.0-20241031183155-75e02bf3ae5c/go.mod h1:h81HY/MPZ4wTzH+iRNsWHqCEoURdnXJIHhYXjcV+QNw=
 github.com/fsnotify/fsnotify v1.7.0 h1:8JEhPFa5W2WU7YfeZzPNqzMP6Lwt7L2715Ggo0nosvA=
 github.com/fsnotify/fsnotify v1.7.0/go.mod h1:40Bi/Hjc2AVfZrqy+aj+yEI+/bRxZnMJyTJwOpGvigM=
 github.com/fxamacker/cbor/v2 v2.7.0 h1:iM5WgngdRBanHcxugY4JySA0nk1wZorNOpTgCMedv5E=
@@ -587,6 +589,8 @@ github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches v0.0.0-202410281823
 github.com/zzylol/prometheus-sketch-VLDB/prometheus-sketches v0.0.0-20241028182337-4e9ac2e3497b/go.mod h1:utYEKECZdCndMSH/CG0R3Cpb5ukkZFsPibIhWi29bxE=
 github.com/zzylol/prometheus-sketch-VLDB/uniform-sampling-caching/prometheus v0.0.0-20241028182337-4e9ac2e3497b h1:ptZk+EjHwpaQf+NxXoO0opDkB/HMeGYJwJETf8dHMqs=
 github.com/zzylol/prometheus-sketch-VLDB/uniform-sampling-caching/prometheus v0.0.0-20241028182337-4e9ac2e3497b/go.mod h1:QiIlqAeVdnAETgD3FJsYsQzcDZu3tKSfs6TW5SyzAcw=
+github.com/zzylol/prometheus-sketches v0.0.0-20240930201432-bcde765c4f02 h1:NgPzXSFzw2uikDqAgMiAArVMPvhBPO6ZGqUqXzqZnLo=
+github.com/zzylol/prometheus-sketches v0.0.0-20240930201432-bcde765c4f02/go.mod h1:YuGgKUrT5v0eW4QOcPeZIBG38LSC8NqTMKwZRLnoSUc=
 go.opencensus.io v0.21.0/go.mod h1:mSImk1erAIZhrmZN+AvHh14ztQfjbGwt4TtuofqLduU=
 go.opencensus.io v0.22.0/go.mod h1:+kGneAE2xo2IficOXnaByMWTGM9T73dGwxeWcUqIpI8=
 go.opencensus.io v0.22.2/go.mod h1:yxeiOL68Rb0Xd1ddK5vPZ/oVn4vY4Ynel7k9FzqtOIw=
