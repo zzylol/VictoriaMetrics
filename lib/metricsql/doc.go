@@ -1,2 +1,2 @@
-// Package metricsql has been moved to https://github.com/VictoriaMetrics/metricsql .
+// Package metricsql has been moved to https://github.com/zzylol/metricsql .
 package metricsql

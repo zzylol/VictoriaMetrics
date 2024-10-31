@@ -7,8 +7,8 @@ import (
 
 	"github.com/VictoriaMetrics/VictoriaMetrics/lib/logger"
 	"github.com/VictoriaMetrics/VictoriaMetrics/lib/storage"
-	"github.com/VictoriaMetrics/metricsql"
-	"github.com/VictoriaMetrics/metricsql/binaryop"
+	"github.com/zzylol/metricsql"
+	"github.com/zzylol/metricsql/binaryop"
 )
 
 var binaryOpFuncs = map[string]binaryOpFunc{

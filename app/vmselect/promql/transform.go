@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/VictoriaMetrics/metricsql"
+	"github.com/zzylol/metricsql"
 
 	"github.com/VictoriaMetrics/VictoriaMetrics/app/vmselect/searchutils"
 	"github.com/VictoriaMetrics/VictoriaMetrics/lib/bytesutil"

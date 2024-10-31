@@ -7,7 +7,7 @@ package prometheus
 //line app/vmselect/prometheus/expand-with-exprs.qtpl:1
 import (
 	"fmt"
-	"github.com/VictoriaMetrics/metricsql"
+	"github.com/zzylol/metricsql"
 )
 
 // ExpandWithExprsResponse returns a webpage, which expands with templates in q MetricsQL.

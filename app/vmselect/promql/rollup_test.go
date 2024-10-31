@@ -4,7 +4,7 @@ import (
 	"math"
 	"testing"
 
-	"github.com/VictoriaMetrics/metricsql"
+	"github.com/zzylol/metricsql"
 )
 
 var (

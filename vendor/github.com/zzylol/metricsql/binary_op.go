@@ -5,7 +5,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/VictoriaMetrics/metricsql/binaryop"
+	"github.com/zzylol/metricsql/binaryop"
 )
 
 var binaryOps = map[string]bool{
@@ -191,9 +191,9 @@ func binaryOpEvalNumber(op string, left, right float64, isBool bool) float64 {
 		case "^":
 			left = binaryop.Pow(left, right)
 		case "and":
-			left = binaryop.And(left, right)
+			// Nothing to do
 		case "or":
-			left = binaryop.Or(left, right)
+			// Nothing to do
 		case "unless":
 			left = nan
 		case "default":

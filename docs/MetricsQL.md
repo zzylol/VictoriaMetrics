@@ -15,7 +15,7 @@ MetricsQL is backwards-compatible with PromQL, so Grafana dashboards backed by P
 the same after switching from Prometheus to VictoriaMetrics.
 However, there are some [intentional differences](https://medium.com/@romanhavronenko/victoriametrics-promql-compliance-d4318203f51e) between these two languages.
 
-[Standalone MetricsQL package](https://godoc.org/github.com/VictoriaMetrics/metricsql) can be used for parsing MetricsQL in external apps.
+[Standalone MetricsQL package](https://godoc.org/github.com/zzylol/metricsql) can be used for parsing MetricsQL in external apps.
 
 If you are unfamiliar with PromQL, then it is suggested reading [this tutorial for beginners](https://medium.com/@valyala/promql-tutorial-for-beginners-9ab455142085)
 and introduction into [basic querying via MetricsQL](https://docs.victoriametrics.com/keyconcepts/#metricsql).

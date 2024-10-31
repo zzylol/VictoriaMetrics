@@ -1,5 +1,5 @@
-[![GoDoc](https://godoc.org/github.com/VictoriaMetrics/metricsql?status.svg)](http://godoc.org/github.com/VictoriaMetrics/metricsql)
-[![Go Report](https://goreportcard.com/badge/github.com/VictoriaMetrics/metricsql)](https://goreportcard.com/report/github.com/VictoriaMetrics/metricsql)
+[![GoDoc](https://godoc.org/github.com/zzylol/metricsql?status.svg)](http://godoc.org/github.com/zzylol/metricsql)
+[![Go Report](https://goreportcard.com/badge/github.com/zzylol/metricsql)](https://goreportcard.com/report/github.com/zzylol/metricsql)
 
 
 # metricsql
@@ -18,4 +18,4 @@ and [PromQL](https://medium.com/@valyala/promql-tutorial-for-beginners-9ab455142
     // See Parse examples for more details.
 ```
 
-See [docs](https://godoc.org/github.com/VictoriaMetrics/metricsql) for more details.
+See [docs](https://godoc.org/github.com/zzylol/metricsql) for more details.

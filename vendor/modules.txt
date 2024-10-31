@@ -119,10 +119,6 @@ github.com/VictoriaMetrics/fastcache
 # github.com/VictoriaMetrics/metrics v1.35.1
 ## explicit; go 1.17
 github.com/VictoriaMetrics/metrics
-# github.com/VictoriaMetrics/metricsql v0.79.0
-## explicit; go 1.13
-github.com/VictoriaMetrics/metricsql
-github.com/VictoriaMetrics/metricsql/binaryop
 # github.com/VividCortex/ewma v1.2.0
 ## explicit; go 1.12
 github.com/VividCortex/ewma
@@ -592,6 +588,10 @@ github.com/valyala/quicktemplate
 # github.com/xrash/smetrics v0.0.0-20240521201337-686a1a2994c1
 ## explicit; go 1.15
 github.com/xrash/smetrics
+# github.com/zzylol/metricsql v0.1.1
+## explicit; go 1.13
+github.com/zzylol/metricsql
+github.com/zzylol/metricsql/binaryop
 # go.opencensus.io v0.24.0
 ## explicit; go 1.13
 go.opencensus.io

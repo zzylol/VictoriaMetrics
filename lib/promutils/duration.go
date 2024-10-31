@@ -3,7 +3,7 @@ package promutils
 import (
 	"time"
 
-	"github.com/VictoriaMetrics/metricsql"
+	"github.com/zzylol/metricsql"
 )
 
 // Duration is duration, which must be used in Prometheus-compatible yaml configs.

@@ -1,7 +1,7 @@
 package promql
 
 import (
-	"github.com/VictoriaMetrics/metricsql"
+	"github.com/zzylol/metricsql"
 )
 
 // IsRollup verifies whether s is a rollup with non-empty window.

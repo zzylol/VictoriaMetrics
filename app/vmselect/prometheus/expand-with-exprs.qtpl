@@ -1,6 +1,6 @@
 {% import (
     "fmt"
-	"github.com/VictoriaMetrics/metricsql"
+	"github.com/zzylol/metricsql"
 ) %}
 
 {% stripspace %}
